@@ -6,7 +6,7 @@
         simon1uo
       </div>
       <div class="description">
-        a frontend beginner
+        stay 🤯 brain-storming
       </div>
     </div>
     <div class="col-span-4 row-span-2 card recently-update">
@@ -19,7 +19,7 @@
     </div>
     <div class="col-span-4 row-span-2 card recently-update">
       <div class="title mt-0">
-        recently update
+        recently updates
       </div>
       <div class="content-list text-sm">
         💂🏻‍ still building

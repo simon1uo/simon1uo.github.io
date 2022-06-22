@@ -20,6 +20,36 @@
     .title {
         @apply font-bold text-2xl my-2 text-slate-700 dark:text-slate-300;
     }
+
+    .content-doc {
+        @apply prose dark:prose-invert  max-w-none p-6;
+    }
+
+    .prose h1,
+    .prose h2,
+    .prose h3 {
+        @apply my-1;
+    }
+
+    /* Customize headers to remove default underline */
+    .prose h2 a,
+    .prose h3 a {
+        @apply no-underline font-bold;
+    }
+
+    .prose h2 a:hover,
+    .prose h3 a:hover {
+         @apply border-b border-neutral-600 dark:border-neutral-300;
+     }
+
+    .prose p {
+        @apply mt-0 mb-0;
+    }
+
+    .prose ul {
+        @apply pl-0;
+    }
+
 }
 
 @layer components {

@@ -37,7 +37,11 @@ This is a blog based on ✨ below
 
 ::list
 + main framework ✅
-+ deployment 
-+ index contents
++ post archive supported ✅ 
++ deployment ✅ (github-pages for now)
++ index contents (recently updates / recently project from github maybe 🤔)
++ post cover image 
++ comment section (disqus maybe)
++ post search feature
 ::
 
