@@ -1,0 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+    :root {
+    }
+
+    .page-enter-active,
+    .page-leave-active {
+        transition: opacity 0.5s;
+    }
+    .page-enter,
+    .page-leave-active {
+        opacity: 0;
+    }
+
+    .title {
+        @apply font-bold text-2xl my-2 text-slate-700 dark:text-slate-300;
+    }
+}
+
+@layer components {
+    .card {
+        @apply rounded-lg bg-white dark:bg-slate-600;
+        box-shadow: 0 4px 10px rgba(0,2,4,.06),0 0 1px rgba(0,2,4,.11);
+    }
+}
