@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
 @layer base {
     :root {
-    }
-
-    .page-enter-active,
-    .page-leave-active {
-        transition: opacity 0.5s;
-    }
-
-    .page-enter,
-    .page-leave-active {
-        opacity: 0;
     }
 
     .title {
@@ -24,25 +24,25 @@
         @apply prose dark:prose-invert  max-w-none p-6;
     }
 
-    .prose h1,
-    .prose h2,
-    .prose h3 {
+    .content-doc h1,
+    .content-doc h2,
+    .content-doc h3 {
         @apply my-1;
     }
 
     /* Customize headers to remove default underline */
-    .prose h2 a,
-    .prose h3 a {
+    .content-doc h2 a,
+    .content-doc h3 a {
         @apply no-underline font-bold;
     }
 
-    .prose h2 a:hover,
-    .prose h3 a:hover {
+    .content-doc h2 a:hover,
+    .content-doc h3 a:hover {
         @apply border-b border-neutral-600 dark:border-neutral-300;
     }
 
-    .prose p {
-        @apply mt-0 mb-0;
+    .content-doc p {
+        @apply my-5;
     }
 
     .prose ul {

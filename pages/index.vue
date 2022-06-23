@@ -1,15 +1,15 @@
 <template>
-  <div class="grid gap-4 grid-cols-6">
-    <div class="col-span-2 row-span-4 card profile">
+  <div class="grid gap-4 md:grid-cols-6 sm:grid-cols-1">
+    <div class="md:col-span-2 col-span-1 sm:row-span-4 card profile">
       <img src="https://cdn.jsdelivr.net/gh/simon1uo/image-flow@master/image/9fi5n2.png" alt="avatar">
       <div class="info">
         simon1uo
       </div>
-      <div class="description">
-        stay 🤯 brain-storming
+      <div class="description text-center">
+        💭  <br>
       </div>
     </div>
-    <div class="col-span-4 row-span-2 card recently-update">
+    <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">
       <div class="title mt-0">
         recently working on
       </div>
@@ -17,7 +17,7 @@
         💂🏻‍ still building
       </div>
     </div>
-    <div class="col-span-4 row-span-2 card recently-update">
+    <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">
       <div class="title mt-0">
         recently updates
       </div>
@@ -41,7 +41,7 @@
 }
 
 .profile img {
-  @apply my-3 border-2 border-slate-300;
+  @apply my-3 border-2 border-slate-300 hover:shadow-lg transition;
   width: 150px;
   border-radius: 50%;
 }

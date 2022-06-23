@@ -19,22 +19,21 @@ const navigation = [
 </script>
 
 <template>
-  <div class="max-w-4xl my-6 px-3 py-1 mx-auto">
-    <div class="flex justify-between">
+  <div class="max-w-4xl my-6 px-5 py-1 mx-auto">
+    <div class="sm:justify-between sm:flex">
       <NuxtLink
         to="/"
         class="logo"
-        style="{line-height: 48px}"
       >
-        simon's
+        simon's blog
       </NuxtLink>
       <nav>
-        <ul class="flex text-lg text-slate-500 dark:text-slate-200">
+        <ul class="flex text-lg text-slate-500 dark:text-slate-200 mt-2">
           <li v-for="nav in navigation" :key="nav.link">
             <NuxtLink
               :to="nav.link"
-              class="transition rounded-md mr-2 md:hover:bg-slate-200 md:hover:dark:bg-slate-700 py-1 md:px-3"
-              active-class="md:bg-slate-300 md:dark:bg-slate-500 md:no-underline underline"
+              class="transition rounded-md mr-2 hover:bg-slate-200 hover:dark:bg-slate-700 py-1 px-3"
+              active-class="bg-slate-300 dark:bg-slate-500 no-underline underline"
             >
               <Icon :name="nav.icon" />
               {{ nav.title }}
