@@ -2,6 +2,10 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  target: 'static',
+  router: {
+    base: '/'
+  },
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   css: ['@/assets/css/index.css'],
   // https://color-mode.nuxtjs.org

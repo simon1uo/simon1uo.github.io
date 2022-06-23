@@ -1,7 +1,5 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 @layer base {
@@ -12,6 +10,7 @@
     .page-leave-active {
         transition: opacity 0.5s;
     }
+
     .page-enter,
     .page-leave-active {
         opacity: 0;
@@ -39,8 +38,8 @@
 
     .prose h2 a:hover,
     .prose h3 a:hover {
-         @apply border-b border-neutral-600 dark:border-neutral-300;
-     }
+        @apply border-b border-neutral-600 dark:border-neutral-300;
+    }
 
     .prose p {
         @apply mt-0 mb-0;
@@ -55,6 +54,6 @@
 @layer components {
     .card {
         @apply rounded-lg bg-white dark:bg-slate-600;
-        box-shadow: 0 4px 10px rgba(0,2,4,.06),0 0 1px rgba(0,2,4,.11);
+        box-shadow: 0 4px 10px rgba(0, 2, 4, .06), 0 0 1px rgba(0, 2, 4, .11);
     }
 }
