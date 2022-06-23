@@ -9,6 +9,7 @@ npm run generate
 
 # 进入生成的文件夹
 cd dist
+touch .nojekyll
 
 # deploy to github pages
 msg='deployed: '

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: add favicon and index page">
-      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: solve static source request 404.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
@@ -75,7 +75,7 @@
       <recent name="$PROJECT_DIR$/content/posts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.generate">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -128,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.generate" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.generate" />
         <item itemvalue="npm.preview" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.generate" />
@@ -151,7 +151,7 @@
       <workItem from="1655825455011" duration="7977000" />
       <workItem from="1655862041165" duration="23049000" />
       <workItem from="1655900732709" duration="5041000" />
-      <workItem from="1655950684174" duration="3090000" />
+      <workItem from="1655950684174" duration="7420000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -167,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655899577914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: update config">
+      <created>1655954312583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655954312583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: solve static source request 404.">
+      <created>1655966626863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655966626863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +215,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="init: basic framework version commit" />
     <MESSAGE value="fix: add favicon and index page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add favicon and index page" />
+    <MESSAGE value="fix: update config" />
+    <MESSAGE value="fix: solve static source request 404." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: solve static source request 404." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
