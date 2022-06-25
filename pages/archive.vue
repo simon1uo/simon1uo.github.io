@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <ContentList v-slot="{ list }" path="/posts">
       <div v-for="article in toNewestContentList(list)" :key="article.title">
         <div class="card archive-card">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </ContentList>
-  </main>
+  </div>
 </template>
 
 <script lang="ts" setup>

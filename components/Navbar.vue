@@ -22,7 +22,7 @@ const navigation = [
   <div class="max-w-4xl my-6 px-5 py-1 mx-auto">
     <div class="sm:justify-between sm:flex">
       <NuxtLink
-        to="/"
+        href="/"
         class="logo"
       >
         simon's blog

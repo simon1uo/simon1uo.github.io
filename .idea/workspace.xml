@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: pending github action config">
-      <change afterPath="$PROJECT_DIR$/components/content/Copyright.vue" afterDir="false" />
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: fix style and add copyright card">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PageFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/PageFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/MarkdownBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/MarkdownBlock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/1.hello-world.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/1.hello-world.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/posts/[...slug].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/[...slug].vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +153,8 @@
       <workItem from="1655950684174" duration="17977000" />
       <workItem from="1655992479783" duration="1192000" />
       <workItem from="1655993792483" duration="2000" />
-      <workItem from="1656003227218" duration="11634000" />
+      <workItem from="1656003227218" duration="11897000" />
+      <workItem from="1656166645315" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -234,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655981957027</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: fix style and add copyright card">
+      <created>1656166007966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656166007966</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +245,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -276,7 +280,8 @@
     <MESSAGE value="feat: add github action config" />
     <MESSAGE value="feat: update github action config" />
     <MESSAGE value="feat: pending github action config" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: pending github action config" />
+    <MESSAGE value="feat: fix style and add copyright card" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix style and add copyright card" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
