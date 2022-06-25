@@ -1,0 +1,1 @@
+import{_ as t,f as r,v as n}from"./entry-a8640bce.mjs";const a=r({props:{code:{type:String,default:""},language:{type:String,default:null},filename:{type:String,default:null},highlights:{type:Array,default:()=>[]}}});function o(e,l,s,d,p,i){return n(e.$slots,"default")}var f=t(a,[["render",o]]);export{f as default};
