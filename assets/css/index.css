@@ -45,9 +45,21 @@
         @apply my-5;
     }
 
-    .prose ul {
-        @apply pl-0;
+
+    .content-doc blockquote {
+        font-style: normal;
     }
+
+    .content-doc a:not(h2 a, h3 a)
+    {
+        text-decoration: none;
+        @apply p-1 underline-offset-2 underline decoration-2 decoration-slate-400 hover:text-slate-400 transition duration-500;
+    }
+
+    .content-doc p code {
+        @apply p-0.5 bg-slate-200 dark:bg-slate-500 rounded-md;
+    }
+
 
 }
 

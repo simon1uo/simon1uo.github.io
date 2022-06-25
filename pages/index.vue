@@ -7,6 +7,10 @@
       </div>
       <div class="description text-center">
         💭  <br>
+        <div class="text-sm">
+          <span class="mr-1 cursor-pointer" @click="to('https://github.com/simon1uo')"><Icon name="ion:logo-github" /></span>
+          <span class="cursor-pointer" @click="to('https://simon1uo.github.io/notebook')"><Icon name="emojione:notebook" /></span>
+        </div>
       </div>
     </div>
     <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">

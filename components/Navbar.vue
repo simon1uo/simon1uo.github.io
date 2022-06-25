@@ -32,8 +32,8 @@ const navigation = [
           <li v-for="nav in navigation" :key="nav.link">
             <NuxtLink
               :to="nav.link"
-              class="transition rounded-md mr-2 hover:bg-slate-200 hover:dark:bg-slate-700 py-1 px-3"
-              active-class="bg-slate-300 dark:bg-slate-500 no-underline underline"
+              class="transition duration-500 rounded-md mr-2 hover:bg-slate-200 active:bg-slate-300 active:dark:bg-slate-400 hover:dark:bg-slate-500 py-1 px-3"
+              active-class="bg-slate-200 dark:bg-slate-500 no-underline underline"
             >
               <Icon :name="nav.icon" />
               {{ nav.title }}

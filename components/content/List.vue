@@ -11,10 +11,17 @@ defineProps({
 </script>
 
 <template>
-  <ul class="p-0">
-    <li v-for="(item, index) of flatUnwrap($slots.default(), ['ul'])" :key="index" class="flex">
-      <Icon :name="icon" class="flex-shrink-0 w-6 h-6 mt-1" />
+  <ul class="p-0 m-0">
+    <li v-for="(item, index) of flatUnwrap($slots.default(), ['ul'])" :key="index" class="flex-col">
+      <Icon :name="icon" class="w-4 h-4 items-center" />
       <span><Markdown :use="() => item" unwrap="li" /></span>
     </li>
   </ul>
 </template>
+
+<style lang="postcss" scoped>
+li {
+  @apply ml-0 pl-0 list-none;
+}
+
+</style>

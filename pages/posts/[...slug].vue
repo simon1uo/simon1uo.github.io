@@ -26,14 +26,22 @@
       </template>
     </ContentDoc>
   </div>
-  <!--  <div class="card comments">-->
-  <!--    <div class="title">-->
-  <!--      comments-->
-  <!--    </div>-->
-  <!--  </div>-->
+  <div class="card comments h-64">
+    <div class="title">
+      comments
+    </div>
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+export default {
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000)
+    })
+  }
+}
 </script>
 
 <style lang="postcss">

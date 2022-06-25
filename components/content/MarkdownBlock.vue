@@ -4,3 +4,6 @@
     <Markdown :use="$slots.default" unwrap="p" />
   </pre>
 </template>
+
+<style lang="postcss">
+</style>

@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Simon's Blog` : "Simon's Blog"
+    return titleChunk ? `${titleChunk} - Simon's Blog` : 'Simon\'s Blog'
   }
 })
 
@@ -19,7 +19,7 @@ useHead({
 
 <style lang="postcss">
 body {
-  @apply bg-slate-100 dark:bg-slate-800;
+  @apply bg-slate-100 dark:bg-slate-800 transition duration-500;
 }
 
 </style>
