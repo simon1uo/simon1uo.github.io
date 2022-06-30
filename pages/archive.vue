@@ -28,7 +28,7 @@ useHead({
 })
 
 const toFormattedDate = (date: any) => {
-  return dayjs(date).format('YY/MM/DD')
+  return dayjs(date).format('YYYY/MM/DD')
 }
 
 const toTag = (tag: string) => {

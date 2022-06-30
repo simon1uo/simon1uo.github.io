@@ -4,7 +4,7 @@ title: 'about'
 
 # about
 
-## me & myself 
+ 
 
 ## work
 
