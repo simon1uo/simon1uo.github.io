@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: fix style and add copyright card">
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: fix blank occurred when from post to nav bar click">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key.txt.pub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/[...slug].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/[...slug].vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,37 +37,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AsSpvrsSIy7e6LTiNMMeseiQu9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/Simon/Project/blog-project/blog-source/.github&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/Simon/.config/yarn/global/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/Simon/Project/blog-project/blog-source/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/Simon/Project/blog-project/blog-source/.github/workflows",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/Simon/.config/yarn/global/node_modules/prettier",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "ts.external.directory.path": "/Users/Simon/Project/blog-project/blog-source/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/.github" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/content/posts" />
-      <recent name="$PROJECT_DIR$/content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components/content" />
@@ -74,7 +80,7 @@
       <recent name="$PROJECT_DIR$/pages/posts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -154,7 +160,10 @@
       <workItem from="1655992479783" duration="1192000" />
       <workItem from="1655993792483" duration="2000" />
       <workItem from="1656003227218" duration="11897000" />
-      <workItem from="1656166645315" duration="1265000" />
+      <workItem from="1656166645315" duration="3045000" />
+      <workItem from="1656213594385" duration="673000" />
+      <workItem from="1656239774026" duration="2000" />
+      <workItem from="1656605768300" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -233,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656166007966</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix: fix blank occurred when from post to nav bar click">
+      <created>1656168024537</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656168024537</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +286,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init: basic framework version commit" />
     <MESSAGE value="fix: add favicon and index page" />
     <MESSAGE value="fix: update config" />
@@ -281,7 +298,8 @@
     <MESSAGE value="feat: update github action config" />
     <MESSAGE value="feat: pending github action config" />
     <MESSAGE value="feat: fix style and add copyright card" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix style and add copyright card" />
+    <MESSAGE value="fix: fix blank occurred when from post to nav bar click" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix blank occurred when from post to nav bar click" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
