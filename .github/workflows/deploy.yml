@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: |
           yarn install
-          yarn nojekyll
+          yarn run nojekyll
           yarn generate
 
       # 发布到 gh-page 分支

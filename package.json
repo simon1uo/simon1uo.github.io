@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "nojekyll": "touch .nojekyll",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."

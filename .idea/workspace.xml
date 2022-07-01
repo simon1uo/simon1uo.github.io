@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: change cache to yarn">
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: update deploy config">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <recent name="$PROJECT_DIR$/pages/posts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.nojekyll">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -115,6 +116,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="nojekyll" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="nojekyll" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -127,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.nojekyll" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.generate" />
         <item itemvalue="npm.preview" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.generate" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +168,7 @@
       <workItem from="1656166645315" duration="3045000" />
       <workItem from="1656213594385" duration="673000" />
       <workItem from="1656239774026" duration="2000" />
-      <workItem from="1656605768300" duration="893000" />
+      <workItem from="1656605768300" duration="1503000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -285,7 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656606341369</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix: change deploy service">
+      <created>1656639478591</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656639478591</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: update deploy config">
+      <created>1656640013612</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1656640013612</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +364,9 @@
     <MESSAGE value="update: update config and add deploy action" />
     <MESSAGE value="fix: fix branch name" />
     <MESSAGE value="fix: change cache to yarn" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: change cache to yarn" />
+    <MESSAGE value="fix: change deploy service" />
+    <MESSAGE value="fix: update deploy config" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update deploy config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
