@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: fix blank occurred when from post to nav bar click">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/key.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/key.txt.pub" afterDir="false" />
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: change cache to yarn">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/2.build-blog-with-nuxt-content.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/3.design-print-style-with-css.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +157,7 @@
       <workItem from="1656166645315" duration="3045000" />
       <workItem from="1656213594385" duration="673000" />
       <workItem from="1656239774026" duration="2000" />
-      <workItem from="1656605768300" duration="242000" />
+      <workItem from="1656605768300" duration="893000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -249,7 +243,49 @@
       <option name="project" value="LOCAL" />
       <updated>1656168024537</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update: update contents">
+      <created>1656606094947</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606094947</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update: update about and archive">
+      <created>1656606109595</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606109595</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update: update about and archive">
+      <created>1656606121735</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606121735</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: fix branch name">
+      <created>1656606195620</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606195620</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix: fix branch name">
+      <created>1656606280142</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606280142</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: change cache to yarn">
+      <created>1656606341369</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656606341369</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +299,7 @@
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
               <option name="FILTERS">
@@ -299,7 +335,11 @@
     <MESSAGE value="feat: pending github action config" />
     <MESSAGE value="feat: fix style and add copyright card" />
     <MESSAGE value="fix: fix blank occurred when from post to nav bar click" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix blank occurred when from post to nav bar click" />
+    <MESSAGE value="update: update contents" />
+    <MESSAGE value="update: update config and add deploy action" />
+    <MESSAGE value="fix: fix branch name" />
+    <MESSAGE value="fix: change cache to yarn" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: change cache to yarn" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
