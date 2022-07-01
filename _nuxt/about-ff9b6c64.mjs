@@ -1,1 +1,0 @@
-import{_ as t,o as c,c as e,b as n,A as a}from"./entry-a8640bce.mjs";const s={},_={class:"card p-4"};function r(d,p){const o=a;return c(),e("div",_,[n(o,{class:"content-doc",path:"/about"})])}var l=t(s,[["render",r]]);export{l as default};
