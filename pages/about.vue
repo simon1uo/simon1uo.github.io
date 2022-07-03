@@ -1,6 +1,11 @@
 <template>
-  <div class="card p-4">
-    <ContentDoc class="content-doc" path="/about" />
+  <div>
+    <div class="card p-4">
+      <ContentDoc class="content-doc" path="/about" />
+    </div>
+    <div class="card">
+      <PostComment />
+    </div>
   </div>
 </template>
 

@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   target: 'static',
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
-  css: ['@/assets/css/index.css'],
+  css: ['@/assets/css/index.css', '@waline/client/dist/waline.css'],
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: ''

@@ -27,23 +27,15 @@
         </template>
       </ContentDoc>
     </div>
-    <div class="card comments h-64">
-      <div class="title">
-        comments
-      </div>
+    <div class="card comments">
+      <PostComment />
     </div>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-
-}
+<script lang="ts" setup>
 </script>
 
 <style lang="postcss">
 
-.comments {
-  @apply prose dark:prose-invert  max-w-none px-6 py-2 my-3;
-}
 </style>
