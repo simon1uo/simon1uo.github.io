@@ -17,7 +17,7 @@
     }
 
     .title {
-        @apply font-bold text-2xl my-2 text-slate-700 dark:text-slate-300;
+        @apply font-bold text-2xl my-2 text-slate-500 dark:text-slate-300;
     }
 
     .content-doc {

@@ -1,19 +1,17 @@
 <template>
   <div>
     <ContentList v-slot="{ list }" path="/posts">
-      <div v-for="article in toNewestContentList(list)" :key="article.title">
-        <div class="card archive-card">
-          <div class="flex-col">
-            <NuxtLink :to="article.link" class="font-bold text-lg text-slate-700 dark:text-slate-200 ">
-              {{ article.title }}
-            </NuxtLink>
-            <div class="text-md font-semibold text-slate-300 right-0">
-              {{ toTag(article.tag) }}
-            </div>
-          </div>
-          <div class="font-normal dark:text-slate-50 float-left">
-            {{ toFormattedDate(article.date) }} | {{ article.author ? article.author : 'Simon' }}
-          </div>
+      <div v-for="article in toNewestContentList(list)" :key="article.title" class="card archive-card">
+        <NuxtLink :to="article.link" class="cover-img">
+          <img :src="article.cover" alt="cover">
+        </NuxtLink>
+        <div class="flex-col">
+          <NuxtLink :to="article.link" class="font-semibold text-lg text-slate-700 dark:text-slate-200">
+            {{ article.title }}
+          </NuxtLink>
+        </div>
+        <div class="font-normal text-sm dark:text-slate-50">
+          {{ toFormattedDate(article.date) }} · <span class="tag"> {{ toTag(article.tag) }}</span>
         </div>
       </div>
     </ContentList>
@@ -45,7 +43,7 @@ const toNewestContentList = (list: any) => {
 
 <style lang="postcss" scoped>
 .archive-card {
-  @apply my-3 p-3 dark:prose-invert flex justify-between;
+  @apply my-3 p-3 dark:prose-invert relative;
   transition: .5s;
 }
 
@@ -55,6 +53,25 @@ const toNewestContentList = (list: any) => {
 
 .archive-card a {
   @apply no-underline
+}
+
+.cover-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 73px;
+  img {
+    @apply rounded-r-lg;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+  }
+}
+
+.tag {
+  @apply text-xs p-1 rounded bg-slate-200 dark:bg-slate-400;
 }
 
 </style>

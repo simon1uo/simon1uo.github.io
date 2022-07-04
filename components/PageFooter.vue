@@ -8,9 +8,10 @@
         >
           <Icon name="logos:nuxt-icon" />NuxtJS Content
         </span>
+        | <span class="cursor-pointer font-semibold" @click="to('https://github.com/simon1uo/simon1uo.github.io')"><Icon name="ion:logo-github" /> Github</span>
       </div>
       <div class="text-sm mb-1">
-        © 2022 <span class="font-bold from-cyan-500 to-blue-500 bg-gradient-to-r bg-clip-text text-transparent">SIMON1UO (nomisoul)</span>
+        © 2022 <span class="font-bold from-cyan-500 to-blue-500 bg-gradient-to-r bg-clip-text text-transparent">SIMON1UO (Simon Luo)</span>
       </div>
     </footer>
   </footer>

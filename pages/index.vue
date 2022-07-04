@@ -1,6 +1,6 @@
 <template>
   <div class="grid gap-4 md:grid-cols-6 sm:grid-cols-1">
-    <div class="md:col-span-2 col-span-1 sm:row-span-4 card profile">
+    <div class="md:col-span-2 col-span-1 card profile h-72">
       <img src="https://cdn.jsdelivr.net/gh/simon1uo/image-flow@master/image/9fi5n2.png" alt="avatar">
       <div class="info">
         simon1uo
@@ -8,25 +8,26 @@
       <div class="description text-center">
         💭  <br>
         <div class="text-sm">
-          <span class="mr-1 cursor-pointer" @click="to('https://github.com/simon1uo')"><Icon name="ion:logo-github" /></span>
-          <span class="cursor-pointer" @click="to('https://simon1uo.github.io/notebook')"><Icon name="emojione:notebook" /></span>
+          <a class="mr-1 cursor-pointer" href="https://github.com/simon1uo" target="_blank"><Icon name="ion:logo-github" /></a>
+          <a href="https://simon1uo.github.io/notebook" target="_blank"><Icon name="emojione:notebook" /></a>
         </div>
       </div>
     </div>
-    <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">
+    <!--    <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">
       <div class="title mt-0">
         recently working on
       </div>
       <div class="content-list text-sm">
-        💂🏻‍ still building
+        ...
       </div>
-    </div>
-    <div class="sm:col-span-4 col-span-1 sm:row-span-2 card recently-update">
+    </div>-->
+
+    <div class="sm:col-span-4 col-span-1">
       <div class="title mt-0">
-        recently updates
+        #recently(updates)
       </div>
       <div class="content-list text-sm">
-        💂🏻‍ still building
+        <PostRecentlyUpdate />
       </div>
     </div>
   </div>
@@ -58,7 +59,4 @@
   @apply font-light text-slate-400 dark:text-slate-300;
 }
 
-.recently-update {
-  @apply p-4 prose dark:prose-invert;
-}
 </style>

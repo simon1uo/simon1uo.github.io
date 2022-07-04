@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card p-4">
+    <div class="card">
       <ContentDoc class="content-doc" path="/about" />
     </div>
     <div class="card">
