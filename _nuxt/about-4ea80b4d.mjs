@@ -1,1 +1,0 @@
-import{_ as n,o as s,c as _,a as o,b as t,A as a}from"./entry-6222fe77.mjs";import{_ as r}from"./PostComment-60f1243d.mjs";const d={},m={class:"card"},p={class:"card"};function i(l,u){const c=a,e=r;return s(),_("div",null,[o("div",m,[t(c,{class:"content-doc",path:"/about"})]),o("div",p,[t(e)])])}var h=n(d,[["render",i]]);export{h as default};
