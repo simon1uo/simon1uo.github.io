@@ -1,5 +1,5 @@
 <template>
-  <div id="post-recently-container">
+  <div id="post-recently-container" class="relative">
     <div v-for="post in posts" :key="post" class="card post-item">
       <NuxtLink :to="post.link">
         {{ post.title }}
@@ -9,6 +9,9 @@
         <img :src="post.cover" alt="cover">
       </NuxtLink>
     </div>
+    <NuxtLink to="/archive" class="links mt-1 float-right text-lg text-slate-500">
+      📦 archive>
+    </NuxtLink>
   </div>
 </template>
 
@@ -23,6 +26,7 @@ const posts = await queryContent('posts')
 </script>
 
 <style lang="postcss" scoped>
+
 #post-recently-container {
   li {
     list-style: none;
@@ -31,13 +35,13 @@ const posts = await queryContent('posts')
   .post-item {
     @apply p-2 sm:p-4 mb-2 prose dark:prose-invert relative transition duration-500 overflow-hidden;
 
-    a {
-      text-decoration: none;
-      @apply decoration-slate-400 hover:text-slate-400 transition duration-500;
-    }
-
     .tag {
       @apply text-sm p-1 rounded bg-slate-200 dark:bg-slate-400;
+    }
+
+    a {
+      text-decoration: none;
+      @apply links;
     }
 
     .cover-img {
@@ -66,5 +70,9 @@ const posts = await queryContent('posts')
   .post-item:hover {
     box-shadow: 0 5px 15px rgba(0, 2, 4, .06), 0 0 10px rgba(0, 2, 4, .11);
   }
+}
+
+.links {
+  @apply no-underline decoration-slate-400 hover:text-slate-400 transition duration-500;
 }
 </style>
