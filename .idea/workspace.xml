@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="fix: fix image size on small size screen">
-      <change afterPath="$PROJECT_DIR$/util/index.ts" afterDir="false" />
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: add more info to show">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostRecentlyUpdate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/PostRecentlyUpdate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/Copyright.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/Copyright.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/[...slug].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/[...slug].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +178,7 @@
       <workItem from="1656857515013" duration="4186000" />
       <workItem from="1656864449394" duration="2294000" />
       <workItem from="1656866771049" duration="1000" />
-      <workItem from="1656897261651" duration="6884000" />
+      <workItem from="1656897261651" duration="7188000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -358,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656904033056</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat: add more info to show">
+      <created>1656905472901</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1656905472901</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +422,8 @@
     <MESSAGE value="feat: add post cover image ✨" />
     <MESSAGE value="feat: add post cover image ✨ hover transition" />
     <MESSAGE value="fix: fix image size on small size screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix image size on small size screen" />
+    <MESSAGE value="feat: add more info to show" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add more info to show" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -7,3 +7,9 @@ export const toFormattedDate = (date: any) => {
 export const toTag = (tag: string) => {
   return '#' + tag
 }
+
+export const toNewestContentList = (list: any) => {
+  return list.sort((a, b) => {
+    return dayjs(b.date).valueOf() - dayjs(a.date).valueOf()
+  })
+}

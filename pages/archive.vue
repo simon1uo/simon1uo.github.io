@@ -19,17 +19,11 @@
 </template>
 
 <script lang="ts" setup>
-import { toFormattedDate, toTag } from '~/util'
+import { toFormattedDate, toTag, toNewestContentList } from '~/util'
 
 useHead({
   title: 'archive'
 })
-
-const toNewestContentList = (list: any) => {
-  return list.sort((a, b) => {
-    return dayjs(b.date).valueOf() - dayjs(a.date).valueOf()
-  })
-}
 
 </script>
 
