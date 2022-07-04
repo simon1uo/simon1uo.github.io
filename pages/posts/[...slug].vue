@@ -4,9 +4,16 @@
       <!--     Fetch and display the Markdown document from current path -->
       <ContentDoc v-slot="{doc}">
         <div class="cover-img">
-          <img :src="doc.cover" alt="">
+          <img :src="doc.cover" alt="cover">
+        </div>
+        <div class="p-4 flex justify-between text-slate-500 dark:text-slate-200">
+          <div>
+            {{ toTag(doc.tag) }}
+          </div>
+          <div> {{ toFormattedDate(doc.date) }}</div>
         </div>
         <ContentRenderer :value="doc" class="content-doc" />
+
         <!--         Slot if document is not found
         <template #not-found>
           <div class="p-5 prose dark:prose-invert">
@@ -38,7 +45,7 @@
 </template>
 
 <script lang="ts" setup>
-
+import { toFormattedDate, toTag } from '~/util'
 </script>
 
 <style lang="postcss" scoped>

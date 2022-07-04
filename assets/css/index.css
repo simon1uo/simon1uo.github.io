@@ -23,7 +23,11 @@
     }
 
     .content-doc {
-        @apply prose dark:prose-invert  max-w-none p-6;
+        @apply prose dark:prose-invert  max-w-none p-4 sm:p-6;
+    }
+
+    .content-doc h1 {
+       @apply text-2xl sm:text-4xl;
     }
 
     .content-doc h1,
@@ -62,6 +66,9 @@
         @apply p-0.5 bg-slate-200 dark:bg-slate-500 rounded-md;
     }
 
+    .tag {
+        @apply text-xs p-1 rounded bg-slate-200 dark:bg-slate-400;
+    }
 
 }
 

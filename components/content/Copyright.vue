@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 rounded-lg bg-slate-100 dark:bg-slate-700 relative">
-    <div class="text-3xl absolute font-bold text-slate-200 top-4 right-3">
+    <div class="text-xl sm:text-3xl absolute font-bold text-slate-200 bottom-12 sm:top-4 right-3">
       copyright
     </div>
     <div class="flex">
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="absolute -bottom-5 -right-5 ">
-      <Icon class="text-slate-200 w-28 h-28" name="ri:creative-commons-fill" />
+      <Icon class="text-slate-200 w-16 h-16 sm:w-28 sm:h-28" name="ri:creative-commons-fill" />
     </div>
   </div>
 </template>

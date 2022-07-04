@@ -13,21 +13,12 @@
 </template>
 
 <script lang="ts" setup>
-
-import dayjs from 'dayjs'
+import { toFormattedDate, toTag } from '~/util'
 
 const posts = await queryContent('posts')
   .limit(5)
   .sort({ date: -1 })
   .find()
-
-const toFormattedDate = (date: any) => {
-  return dayjs(date).format('YYYY/MM/DD')
-}
-
-const toTag = (tag: string) => {
-  return '#' + tag
-}
 
 </script>
 
@@ -38,7 +29,7 @@ const toTag = (tag: string) => {
   }
 
   .post-item {
-    @apply p-4 mb-2 prose dark:prose-invert relative transition duration-500;
+    @apply p-2 sm:p-4 mb-2 prose dark:prose-invert relative transition duration-500 overflow-hidden;
 
     a {
       text-decoration: none;

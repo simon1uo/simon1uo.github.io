@@ -10,7 +10,7 @@
             {{ article.title }}
           </NuxtLink>
         </div>
-        <div class="font-normal text-sm dark:text-slate-50">
+        <div class="font-normal text-sm text-slate-500 dark:text-slate-50">
           {{ toFormattedDate(article.date) }} · <span class="tag"> {{ toTag(article.tag) }}</span>
         </div>
       </div>
@@ -19,19 +19,11 @@
 </template>
 
 <script lang="ts" setup>
-import dayjs from 'dayjs'
+import { toFormattedDate, toTag } from '~/util'
 
 useHead({
   title: 'archive'
 })
-
-const toFormattedDate = (date: any) => {
-  return dayjs(date).format('YYYY/MM/DD')
-}
-
-const toTag = (tag: string) => {
-  return '#' + tag
-}
 
 const toNewestContentList = (list: any) => {
   return list.sort((a, b) => {
@@ -43,7 +35,7 @@ const toNewestContentList = (list: any) => {
 
 <style lang="postcss" scoped>
 .archive-card {
-  @apply my-3 p-3 dark:prose-invert relative;
+  @apply my-3 p-2 sm:p-3 dark:prose-invert relative overflow-hidden;
   transition: .5s;
 }
 
@@ -73,10 +65,6 @@ const toNewestContentList = (list: any) => {
   img:hover {
     transform: scale(1.3);
   }
-}
-
-.tag {
-  @apply text-xs p-1 rounded bg-slate-200 dark:bg-slate-400;
 }
 
 </style>
