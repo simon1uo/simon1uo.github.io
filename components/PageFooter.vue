@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <footer class="text-end text-slate-500 dark:text-slate-200 my-5 px-4">
+    <footer class="text-end text-slate-500 dark:text-slate-200 my-5">
       <div class="text-sm mb-1">
         powered by <span
           class="cursor-pointer font-semibold from-green-300 to-green-500 bg-gradient-to-r bg-clip-text text-transparent"
