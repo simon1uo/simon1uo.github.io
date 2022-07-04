@@ -56,10 +56,10 @@ const toNewestContentList = (list: any) => {
 }
 
 .cover-img {
+  @apply w-16 sm:w-40;
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
   height: 73px;
   overflow: hidden;
   img {

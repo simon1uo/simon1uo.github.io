@@ -50,7 +50,7 @@ const toTag = (tag: string) => {
     }
 
     .cover-img {
-      width: 200px;
+      @apply w-20 sm:w-60;
       height: 88px;
       position: absolute;
       top: 0;

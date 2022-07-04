@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: add post cover image ✨">
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: add post cover image ✨ hover transition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/PostRecentlyUpdate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/PostRecentlyUpdate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
     </list>
@@ -177,7 +178,7 @@
       <workItem from="1656857515013" duration="4186000" />
       <workItem from="1656864449394" duration="2294000" />
       <workItem from="1656866771049" duration="1000" />
-      <workItem from="1656897261651" duration="4744000" />
+      <workItem from="1656897261651" duration="5446000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -340,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656902940466</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat: add post cover image ✨ hover transition">
+      <created>1656903242970</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1656903242970</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +406,8 @@
     <MESSAGE value="fix: update deploy config" />
     <MESSAGE value="feat: add waline comment plugin" />
     <MESSAGE value="feat: add post cover image ✨" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add post cover image ✨" />
+    <MESSAGE value="feat: add post cover image ✨ hover transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add post cover image ✨ hover transition" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
