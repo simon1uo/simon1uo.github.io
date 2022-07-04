@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="feat: add more info to show">
+    <list default="true" id="9724aa52-2648-4f8b-a521-6abf17d9050a" name="Changes" comment="update: update contents">
+      <change afterPath="$PROJECT_DIR$/content/posts/6.blogging-properly.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/archive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/3.build-blog-with-nuxt-content.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/3.build-blog-with-nuxt-content.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/4.notebook-update-html-css.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/4.notebook-update-html-css.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/5.notebook-update-javascript.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/5.notebook-update-javascript.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
-        <option value="Vue3 With Setup script" />
         <option value="TypeScript File" />
+        <option value="Vue3 With Setup script" />
       </list>
     </option>
   </component>
@@ -60,7 +61,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/Simon/.config/yarn/global/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/Simon/Project/blog-project/blog-source/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -178,7 +179,8 @@
       <workItem from="1656857515013" duration="4186000" />
       <workItem from="1656864449394" duration="2294000" />
       <workItem from="1656866771049" duration="1000" />
-      <workItem from="1656897261651" duration="7188000" />
+      <workItem from="1656897261651" duration="14001000" />
+      <workItem from="1656923769721" duration="502000" />
     </task>
     <task id="LOCAL-00001" summary="init: basic framework version commit">
       <created>1655893214838</created>
@@ -362,7 +364,35 @@
       <option name="project" value="LOCAL" />
       <updated>1656905472901</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix: fix datejs supported">
+      <created>1656905763708</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656905763708</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix: fix redundant margin">
+      <created>1656907025552</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656907025552</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: add archive links 📦">
+      <created>1656907042103</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656907042103</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update: update contents">
+      <created>1656916661200</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1656916661200</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +430,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="init: basic framework version commit" />
     <MESSAGE value="fix: add favicon and index page" />
     <MESSAGE value="fix: update config" />
     <MESSAGE value="fix: solve static source request 404." />
@@ -412,7 +441,6 @@
     <MESSAGE value="feat: pending github action config" />
     <MESSAGE value="feat: fix style and add copyright card" />
     <MESSAGE value="fix: fix blank occurred when from post to nav bar click" />
-    <MESSAGE value="update: update contents" />
     <MESSAGE value="update: update config and add deploy action" />
     <MESSAGE value="fix: fix branch name" />
     <MESSAGE value="fix: change cache to yarn" />
@@ -423,7 +451,11 @@
     <MESSAGE value="feat: add post cover image ✨ hover transition" />
     <MESSAGE value="fix: fix image size on small size screen" />
     <MESSAGE value="feat: add more info to show" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add more info to show" />
+    <MESSAGE value="fix: fix datejs supported" />
+    <MESSAGE value="fix: fix redundant margin" />
+    <MESSAGE value="feat: add archive links " />
+    <MESSAGE value="update: update contents" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: update contents" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
