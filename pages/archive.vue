@@ -61,12 +61,17 @@ const toNewestContentList = (list: any) => {
   right: 0;
   width: 200px;
   height: 73px;
+  overflow: hidden;
   img {
-    @apply rounded-r-lg;
+    @apply rounded-r-lg transition duration-500;
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin: 0;
+  }
+
+  img:hover {
+    transform: scale(1.3);
   }
 }
 

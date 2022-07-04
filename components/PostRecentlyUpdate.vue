@@ -55,13 +55,19 @@ const toTag = (tag: string) => {
       position: absolute;
       top: 0;
       right: 0;
-
+      overflow: hidden;
       img {
-        @apply rounded-r;
+        @apply rounded-r transition duration-500;
         margin: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+
+    .cover-img:hover {
+      img {
+        transform: scale(1.5);
       }
     }
   }
