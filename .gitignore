@@ -19,7 +19,6 @@ coverage/
 .vscode
 
 # Temp files
-pnpm-lock.yaml
 .vite_opt_cache
 
 # Other files
