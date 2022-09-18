@@ -1,0 +1,40 @@
+name: deploy
+
+# 在main分支发生push事件时触发。
+on:
+  push:
+    branches:
+      - main
+
+env: # 设置环境变量
+  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
+
+    steps:
+      # 检出
+      - name: Checkout
+        uses: actions/checkout@v2
+
+        # 安装 node
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+
+        # 构建
+      - name: Build
+        run: |
+          pnpm install
+          pnpm run build
+
+      # 发布到 gh-page 分支
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./docs/.vitepress/dist
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}

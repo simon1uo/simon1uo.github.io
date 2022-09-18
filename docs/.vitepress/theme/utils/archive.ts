@@ -1,5 +1,3 @@
-import { getQueryParam } from "./utils";
-
 export type Post = {
   date?: string;
   title?: string;
@@ -13,7 +11,7 @@ export function initArchive(postData) {
 
   // $category = getQueryParam("category");
   // $tag = getQueryParam("tag");
-  let $year = getQueryParam("year");
+  // let $year = getQueryParam("year");
 
   postData.sort((post1, post2) => post2.date.localeCompare(post1.date));
   console.log(postData);
