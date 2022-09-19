@@ -1,4 +1,6 @@
-const nav = [
+import { DefaultTheme } from "vitepress";
+
+const nav: DefaultTheme.NavItem[] = [
   {
     text: "main",
     link: "/",
