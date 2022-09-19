@@ -4,8 +4,6 @@ export function formatDate(date) {
     year: "numeric",
     month: "numeric",
     day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
   });
 }
 

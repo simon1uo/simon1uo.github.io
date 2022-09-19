@@ -4,6 +4,10 @@ import IconCreativeCommonsByLine from "~icons/ri/creative-commons-by-line";
 import IconCreativeCommonNcLine from "~icons/ri/creative-commons-nc-line";
 import IconCreativeCommonsSaLine from "~icons/ri/creative-commons-sa-line";
 import IconCreativeCommonFill from "~icons/ri/creative-commons-fill";
+
+import { useData } from "vitepress";
+
+import { formatDate } from "../utils/utils";
 </script>
 
 <template>
@@ -24,7 +28,7 @@ import IconCreativeCommonFill from "~icons/ri/creative-commons-fill";
         <div>
           发布时间
           <span class="ml-1 font-medium">
-            {{ $frontmatter.date.split("T")[0] }}</span
+            {{ formatDate($frontmatter.date) }}</span
           >
         </div>
         <div>
