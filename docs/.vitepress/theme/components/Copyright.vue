@@ -23,7 +23,9 @@ import IconCreativeCommonFill from "~icons/ri/creative-commons-fill";
         </div>
         <div>
           发布时间
-          <span class="ml-1 font-medium"> {{ $frontmatter.date }}</span>
+          <span class="ml-1 font-medium">
+            {{ $frontmatter.date.split("T")[0] }}</span
+          >
         </div>
         <div>
           许可协议
