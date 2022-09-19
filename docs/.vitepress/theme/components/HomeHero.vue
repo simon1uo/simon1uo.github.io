@@ -17,7 +17,7 @@ import HeroActions from "./HeroActions.vue";
 
 <style scoped>
 .home-hero {
-  margin-top: 10rem;
+  @apply my-36
   display: flex;
   flex-direction: column;
   align-items: center;

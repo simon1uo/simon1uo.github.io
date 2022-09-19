@@ -6,17 +6,17 @@ export interface Action {
 export const actions: Action[] = [
   {
     theme: "brand",
-    text: "my github profile",
-    link: "https://github.com/simon1uo",
-  },
-  {
-    theme: "alt",
-    text: "my work",
-    link: "https://github.com/simon1uo",
-  },
-  {
-    theme: "alt",
-    text: "my post",
+    text: "✍🏻 post",
     link: "/archive",
+  },
+  {
+    theme: "alt",
+    text: "📚 notebook",
+    link: "https://simon1uo.github.io/notebook",
+  },
+  {
+    theme: "alt",
+    text: "🚀 github profile",
+    link: "https://github.com/simon1uo",
   },
 ];
