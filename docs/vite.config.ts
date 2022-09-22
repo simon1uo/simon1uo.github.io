@@ -1,4 +1,5 @@
 import type { UserConfig } from "vite";
+import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
@@ -15,16 +16,28 @@ const config: UserConfig = {
     },
   },
   plugins: [
+    AutoImport({
+      resolvers: [
+        IconsResolver({
+          prefix: "icon",
+          enabledCollections: ["mdi", "fluent-emoji", "ri"],
+        }),
+      ],
+    }),
+
     Components({
       dirs: ["docs/.vitepress/theme/components"],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [
         IconsResolver({
-          componentPrefix: "",
+          prefix: "icon",
+          enabledCollections: ["mdi", "fluent-emoji", "ri"],
         }),
       ],
     }),
-    Icons(),
+    Icons({
+      autoInstall: true,
+    }),
     WindiCSS({
       preflight: false,
     }),

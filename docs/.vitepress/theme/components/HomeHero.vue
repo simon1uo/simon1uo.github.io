@@ -4,7 +4,11 @@ import HeroActions from "./HeroActions.vue";
 
 <template>
   <div class="home-hero">
-    <div class="text-4xl">👋👋👋</div>
+    <div class="text-5xl flex">
+      <icon-fluent-emoji-waving-hand />
+      <icon-fluent-emoji-astronaut-light />
+      <icon-fluent-emoji-thought-balloon />
+    </div>
     <div class="text-2xl font-light font-mono">
       hi(<span class="font-serif font-semibold italic">simon</span>)here
     </div>
