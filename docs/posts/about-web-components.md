@@ -3,7 +3,8 @@ title: 🔖 Web Components 实践过后
 description: build build build a blog
 date: 2022-8-20
 tags:
-  - random
+  - frontend
+  - coding
 ---
 
 # 🔖 Web Components 实践过后
@@ -26,11 +27,10 @@ Web Components 已经是前端未来的优秀的一个 Web 标准，希望在 Om
 
 按照我的开发任务，我完成的是一个 OMIU 表格组件的新功能——合并单元格，最后提交的 PR 是 [feat(table): add table body cell span](https://github.com/Tencent/omi/pull/754) 。实际上提交的代码量并不多，并且在原来功能完备的代码之下新增功能，这个代码工作并不算困难，但是还是花了不少时间。实际上，HTML 表格的功能的知识点还是很广的，最后参考了目前开源社区的表格组件的功能实现，所幸的是找到了一个还算合适的解决方案，但是最后还是有一点瑕疵，鉴于时间问题还没有精力去更新代码，所以就直接提交了。希望后面能有时间开发更多关于 OMIU 表格组件相关的功能，能够补上这个不足。
 
-
 ## 参考
 
 - [从零开始写一个 Web Component - GitHub Corners | 云游君的小站 (yunyoujun.cn)](https://www.yunyoujun.cn/posts/how-to-write-a-web-component/)
 - [OMI - Introduction ](https://tencent.github.io/omi/site/docs/index.html) OMI 开发文档
-- [Web Components | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components) 
+- [Web Components | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
 - [Components.studio Documentation | Components.studio](https://components.studio/docs/) ｜ [WebComponents.dev](https://webcomponents.dev/)Web Components 开发模版
 - [webcomponents.org](https://www.webcomponents.org/) Web Compontents 开发社区
