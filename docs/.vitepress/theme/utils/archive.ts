@@ -26,3 +26,7 @@ export function initArchive(postData) {
 
   return archiveData;
 }
+
+export function formatTag(tag) {
+  return "#" + tag;
+}
