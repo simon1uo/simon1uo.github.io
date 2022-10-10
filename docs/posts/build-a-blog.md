@@ -1,7 +1,7 @@
 ---
 title: ⛳️ 又折腾了一次搭建博客
 description: build build build a blog
-date: 2022-09-01
+date: 2022-09-10
 tags:
   - random
 ---
