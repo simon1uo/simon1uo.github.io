@@ -14,7 +14,11 @@ const archiveData = computed(() => initArchive(postData));
 <template>
   <Page>
     <div class="archive">
-      <div class="text-3xl font-extrabold mb-4">Archive</div>
+      <div class="text-3xl font-extrabold mb-4">
+        <div>Archive</div>
+        <div class="text-lg font-normal">文章归档</div>
+      </div>
+
       <div v-for="(post, year) in archiveData" :key="year">
         <div class="text-2xl font-extrabold italic font-serif">
           {{ year }}
