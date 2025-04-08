@@ -1,36 +1,35 @@
 {
-  "name": "source",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "simon1uo.github.io",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "a simon1uo personal website",
+  "author": "simon1uo",
   "scripts": {
     "dev": "vitepress dev docs",
     "generate": "nodemon --watch docs/posts -e md collect-data.mjs",
     "start": "concurrently \"pnpm:generate\" \"pnpm:dev\"",
     "build": "node collect-data.mjs && vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "lint": "eslint . --ext .js,.ts,.vue,.md,.json"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.2.0",
+    "@antfu/eslint-config": "^4.11.0",
+    "@unocss/eslint-plugin": "^66.0.0",
+    "@vueuse/core": "^13.1.0",
     "concurrently": "^7.4.0",
-    "dayjs": "^1.11.5",
-    "fast-glob": "^3.2.12",
+    "dayjs": "^1.11.13",
+    "eslint": "^9.23.0",
+    "eslint-plugin-format": "^1.0.1",
+    "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
     "nodemon": "^2.0.20",
-    "typescript": "^4.8.3",
-    "unplugin-auto-import": "^0.11.2",
+    "typescript": "^5.8.3",
+    "unocss": "66.1.0-beta.10",
+    "unplugin-auto-import": "^19.1.2",
     "unplugin-icons": "^0.14.9",
-    "unplugin-vue-components": "^0.22.7",
-    "vite": "^3.1.2",
-    "vite-plugin-windicss": "^1.8.8",
-    "vitepress": "1.0.0-alpha.15",
-    "vue": "^3.2.39",
-    "windicss": "^3.5.6"
-  },
-  "dependencies": {
-    "@iconify/json": "^2.1.108"
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^6.2.5",
+    "vitepress": "1.6.3",
+    "vue": "^3.5.13"
   }
 }

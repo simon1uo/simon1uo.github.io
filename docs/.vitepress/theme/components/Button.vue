@@ -1,29 +1,30 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { normalizeLink } from "../support/utils";
-import { EXTERNAL_URL_RE } from "../utils/common";
+import { computed } from 'vue'
+import { normalizeLink } from '../support/utils'
+import { EXTERNAL_URL_RE } from '../utils/common'
 
 const props = defineProps<{
-  theme?: "brand" | "alt" | "sponsor";
-  tag?: string;
-  text: string;
-  href?: string;
-}>();
+  theme?: 'brand' | 'alt' | 'sponsor'
+  tag?: string
+  text: string
+  href?: string
+}>()
 
-const classes = computed(() => [props.theme ?? "brand"]);
+const classes = computed(() => [props.theme ?? 'brand'])
 
 const isExternal = computed(
-  () => props.href && EXTERNAL_URL_RE.test(props.href)
-);
+  () => props.href && EXTERNAL_URL_RE.test(props.href),
+)
 
 const component = computed(() => {
   if (props.tag) {
-    return props.tag;
+    return props.tag
   }
 
-  return props.href ? "a" : "button";
-});
+  return props.href ? 'a' : 'button'
+})
 </script>
+
 <template>
   <component
     :is="component"

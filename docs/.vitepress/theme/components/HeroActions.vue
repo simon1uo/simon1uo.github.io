@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Button from "./Button.vue";
-import { actions } from "../../config/actions";
+import { actions } from '../../config/actions'
+import Button from './Button.vue'
 </script>
 
 <template>

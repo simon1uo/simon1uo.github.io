@@ -1,17 +1,17 @@
-import Layout from "./Layout.vue";
-import NotFound from "./components/NotFound.vue";
+import Archive from './components/Archive.vue'
+import NotFound from './components/NotFound.vue'
 
-import "virtual:windi.css";
-import "./style/custom.css";
+import Tags from './components/Tags.vue'
+import Layout from './Layout.vue'
 
-import Archive from "./components/Archive.vue";
-import Tags from "./components/Tags.vue";
+import 'virtual:uno.css'
+import './style/custom.css'
 
 export default {
   Layout,
   NotFound,
-  enhanceApp({ app, router, siteData }) {
-    app.component("Archive", Archive);
-    app.component("Tags", Tags);
+  enhanceApp({ app }) {
+    app.component('Archive', Archive)
+    app.component('Tags', Tags)
   },
-};
+}

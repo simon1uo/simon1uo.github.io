@@ -1,29 +1,31 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useData } from "vitepress";
+import { useData } from 'vitepress'
+import { computed } from 'vue'
 
-import postData from "../../post-data.json";
-import { initArchive, formatTag } from "../utils/archive";
+import postData from '../../post-data.json'
+import { formatTag, initArchive } from '../utils/archive'
 
-import Page from "./Page.vue";
+import Page from './Page.vue'
 
-const { theme } = useData();
-const archiveData = computed(() => initArchive(postData));
+const { theme } = useData()
+const archiveData = computed(() => initArchive(postData))
 </script>
 
 <template>
   <Page>
     <div class="archive">
-      <div class="text-3xl font-extrabold mb-4">
+      <div class="font-extrabold text-3xl mb-4">
         <div>Archive</div>
-        <div class="text-lg font-normal">文章归档</div>
+        <div class="text-lg font-normal">
+          文章归档
+        </div>
       </div>
 
       <div v-for="(post, year) in archiveData" :key="year">
-        <div class="text-2xl font-extrabold italic font-serif">
+        <div class="font-extrabold text-2xl italic font-serif">
           {{ year }}
         </div>
-        <div class="item" v-for="item in post" :key="item">
+        <div v-for="item in post" :key="item" class="item">
           <div>
             <a :href="item.path" class="font-semibold text-xl">{{
               item.title

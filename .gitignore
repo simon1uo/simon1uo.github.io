@@ -25,3 +25,4 @@ coverage/
 docs/components.d.ts
 docs/auto-imports.d.ts
 post-data.json
+docs/.vitepress/cache

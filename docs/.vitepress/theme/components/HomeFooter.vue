@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { useData } from "vitepress";
+import { useData } from 'vitepress'
 
-const data = useData();
-const { theme } = data;
+const data = useData()
+const { theme } = data
 </script>
 
 <template>
   <footer class="footer">
     <div class="container">
-      <p class="text">{{ theme.footer.copyright }}</p>
+      <p class="text">
+        {{ theme.footer.copyright }}
+      </p>
       <p class="text">
         Theme by
         <a href="https://github.com/simon1uo/simon1uo.github.io">simon1uo</a>

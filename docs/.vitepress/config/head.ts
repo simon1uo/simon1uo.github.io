@@ -1,12 +1,12 @@
-import { HeadConfig } from "vitepress";
+import type { HeadConfig } from 'vitepress'
 
 export default <HeadConfig[]>[
   [
-    "link",
+    'link',
     {
-      rel: "icon",
-      type: "image/png",
-      href: "/logo.svg",
+      rel: 'icon',
+      type: 'image/png',
+      href: '/logo.svg',
     },
   ],
-];
+]

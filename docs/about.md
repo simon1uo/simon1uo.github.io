@@ -17,12 +17,12 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/simon1uo' },
     ],
-    desc:"👋🏻 你好！这里是 Simon，目前在学习前端，并且在写一些有趣的前端项目。"
+    desc:"👋🏻 hi/hey this is simon"
   },
   {
     avatar: 'https://s2.loli.net/2022/10/10/kcjXeShZu8ILnK9.png',
     name: 'simon\'s blog',
-    desc: "🏙 这是一个关于与前端内容有关的博客。分享学习前端的思考、关于前端的文章。"
+    desc: "🏙 constantly learning and marking about frontend development",
   },
 ]
 </script>

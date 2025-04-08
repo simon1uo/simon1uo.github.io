@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import HeroActions from "./HeroActions.vue";
+import HeroActions from './HeroActions.vue'
 </script>
 
 <template>
-  <div class="home-hero">
-    <div class="text-5xl flex">
-      <icon-fluent-emoji-waving-hand />
-      <icon-fluent-emoji-astronaut-light />
-      <icon-fluent-emoji-thought-balloon />
-    </div>
+  <div class="home-hero font-sans my-auto">
+    <div class="flex text-5xl" />
     <div class="text-2xl font-light font-mono">
       hi(<span class="font-serif font-semibold italic">simon</span>)here
     </div>
@@ -21,7 +17,6 @@ import HeroActions from "./HeroActions.vue";
 
 <style scoped>
 .home-hero {
-  @apply my-36
   display: flex;
   flex-direction: column;
   align-items: center;

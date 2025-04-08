@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="home-features"></div>
+  <div class="home-features" />
 </template>
 
 <style scoped>
