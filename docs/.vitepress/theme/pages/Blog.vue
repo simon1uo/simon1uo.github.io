@@ -3,9 +3,9 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 
 import postData from '../../post-data.json'
-import { formatTag, initArchive } from '../utils/archive'
+import { formatTag, initArchive } from '../utils/getPostList'
 
-import Page from './Page.vue'
+import Page from '../components/Page.vue'
 
 const { theme } = useData()
 const archiveData = computed(() => initArchive(postData))
@@ -13,19 +13,16 @@ const archiveData = computed(() => initArchive(postData))
 
 <template>
   <Page>
-    <div class="archive">
+    <div class="blog">
       <div class="font-extrabold text-3xl mb-4">
-        <div>Archive</div>
-        <div class="text-lg font-normal">
-          文章归档
-        </div>
+        <div>Blog</div> 
       </div>
 
       <div v-for="(post, year) in archiveData" :key="year">
         <div class="font-extrabold text-2xl italic font-serif">
           {{ year }}
         </div>
-        <div v-for="item in post" :key="item" class="item">
+        <div v-for="item in post" :key="item.title" class="item">
           <div>
             <a :href="item.path" class="font-semibold text-xl">{{
               item.title
@@ -44,7 +41,7 @@ const archiveData = computed(() => initArchive(postData))
 </template>
 
 <style scoped>
-.archive {
+.blog {
   margin-top: 10px;
 }
 
@@ -52,7 +49,7 @@ const archiveData = computed(() => initArchive(postData))
   display: flex;
   flex-direction: column;
   transition: all 0.25s;
-  @apply my-4;
+  /* @apply my-4; */
 }
 
 .item a:hover {
@@ -60,6 +57,6 @@ const archiveData = computed(() => initArchive(postData))
 }
 
 .tag {
-  @apply font-mono font-bold text-sm not-italic mr-1;
+  /* @apply font-mono font-bold text-sm not-italic mr-1; */
 }
 </style>

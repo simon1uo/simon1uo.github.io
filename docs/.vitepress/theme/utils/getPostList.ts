@@ -1,4 +1,4 @@
-export interface Post {
+interface PostData {
   date?: string
   title?: string
   tags?: string[]
@@ -6,15 +6,15 @@ export interface Post {
   path: string
 }
 
-export function initArchive(postData) {
-  const archiveData = {}
+export function initArchive(postData): Record<number, PostData[]> {
+  const archiveData: Record<number, PostData[]> = {}
 
   // $category = getQueryParam("category");
   // $tag = getQueryParam("tag");
   // let $year = getQueryParam("year");
 
   postData.sort((post1, post2) => post2.date.localeCompare(post1.date))
-  console.log(postData)
+  // console.log(postData)
 
   postData.forEach((post) => {
     const year = `(${new Date(post.date).getFullYear()})`

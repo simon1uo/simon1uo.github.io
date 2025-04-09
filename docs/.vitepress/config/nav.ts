@@ -5,13 +5,14 @@ const nav: DefaultTheme.NavItem[] = [
     text: 'main',
     link: '/',
   },
+
   {
-    text: 'archive',
-    link: '/archive',
+    text: 'projects',
+    link: '/projects',
   },
   {
-    text: 'tags',
-    link: '/tags',
+    text: 'blog',
+    link: '/blog',
   },
   {
     text: 'about',
