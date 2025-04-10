@@ -2,7 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 import nav from './nav'
 
 const themeConfig: DefaultTheme.Config = {
-  logo: '/logo.svg',
+  // logo: '/logo.svg',
   nav,
   socialLinks: [
     {

@@ -6,6 +6,4 @@
   <div />
 </template>
 
-<style scoped>
-
-</style>
+<!-- No style needed as we're using UnoCSS utility classes -->

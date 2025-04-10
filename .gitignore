@@ -23,6 +23,6 @@ coverage/
 
 # Other files
 docs/components.d.ts
-docs/auto-imports.d.ts
 post-data.json
 docs/.vitepress/cache
+auto-imports.d.ts

@@ -4,7 +4,7 @@ import Button from './Button.vue'
 </script>
 
 <template>
-  <div class="actions">
+  <div class="flex flex-col items-center">
     <div v-for="action in actions" :key="action.link" class="m-2">
       <Button
         tag="a"
@@ -16,10 +16,4 @@ import Button from './Button.vue'
   </div>
 </template>
 
-<style scoped>
-.actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<!-- No style needed as we're using UnoCSS utility classes -->

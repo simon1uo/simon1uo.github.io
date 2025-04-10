@@ -1,5 +1,5 @@
 export default {
   lang: 'zh-CN',
-  title: 'simon\'s blog',
+  title: 'a simon1uo blog',
   description: 'blog',
 }

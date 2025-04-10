@@ -1,29 +1,22 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "emitDeclarationOnly": true,
+    "noEmit": false
   },
   "include": [
-    "**/*.ts",
-    "**/*.vue",
-    "docs/.vitepress/vite.config.ts",
-    "docs/uno.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "vite-env.d.ts",
+    "auto-imports.d.ts",
+    "docs/**/*",
+    "docs/**/*.vue",
+    "docs/**/*.d.ts"
   ]
 }

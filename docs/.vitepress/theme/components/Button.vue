@@ -28,8 +28,12 @@ const component = computed(() => {
 <template>
   <component
     :is="component"
-    class="button"
-    :class="classes"
+    class="inline-block border-1 border-solid border-transparent text-center font-medium whitespace-nowrap transition-all duration-200 rounded-[20px] px-5 leading-[38px] text-sm"
+    :class="{
+      'border-[var(--vp-button-brand-border)] text-[var(--vp-button-brand-text)] bg-[var(--vp-button-brand-bg)] hover:border-[var(--vp-button-brand-hover-border)] hover:text-[var(--vp-button-brand-hover-text)] hover:bg-[var(--vp-button-brand-hover-bg)] hover:drop-shadow-lg active:border-[var(--vp-button-brand-active-border)] active:text-[var(--vp-button-brand-active-text)] active:bg-[var(--vp-button-brand-active-bg)]': theme === 'brand',
+      'border-[var(--vp-button-alt-border)] text-[var(--vp-button-alt-text)] bg-[var(--vp-button-alt-bg)] hover:border-[var(--vp-button-alt-hover-border)] hover:text-[var(--vp-button-alt-hover-text)] hover:bg-[var(--vp-button-alt-hover-bg)] hover:drop-shadow-lg active:border-[var(--vp-button-alt-active-border)] active:text-[var(--vp-button-alt-active-text)] active:bg-[var(--vp-button-alt-active-bg)]': theme === 'alt',
+      'border-[var(--vp-button-sponsor-border)] text-[var(--vp-button-sponsor-text)] bg-[var(--vp-button-sponsor-bg)] hover:border-[var(--vp-button-sponsor-hover-border)] hover:text-[var(--vp-button-sponsor-hover-text)] hover:bg-[var(--vp-button-sponsor-hover-bg)] hover:drop-shadow-lg active:border-[var(--vp-button-sponsor-active-border)] active:text-[var(--vp-button-sponsor-active-text)] active:bg-[var(--vp-button-sponsor-active-bg)]': theme === 'sponsor'
+    }"
     :href="href ? normalizeLink(href) : undefined"
     :target="isExternal ? '_blank' : undefined"
     :rel="isExternal ? 'noreferrer' : undefined"
@@ -38,74 +42,4 @@ const component = computed(() => {
   </component>
 </template>
 
-<style scoped>
-.button {
-  display: inline-block;
-  border: 1px solid transparent;
-  text-align: center;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: all 0.2s;
-  border-radius: 20px;
-  padding: 0 20px;
-  line-height: 38px;
-  font-size: 14px;
-}
-
-.button.brand {
-  border-color: var(--vp-button-brand-border);
-  color: var(--vp-button-brand-text);
-  background-color: var(--vp-button-brand-bg);
-}
-
-.button.brand:hover {
-  border-color: var(--vp-button-brand-hover-border);
-  color: var(--vp-button-brand-hover-text);
-  background-color: var(--vp-button-brand-hover-bg);
-  filter: drop-shadow(0 5px 5px var(--vp-button-brand-bg));
-}
-
-.button.brand:active {
-  border-color: var(--vp-button-brand-active-border);
-  color: var(--vp-button-brand-active-text);
-  background-color: var(--vp-button-brand-active-bg);
-}
-
-.button.alt {
-  border-color: var(--vp-button-alt-border);
-  color: var(--vp-button-alt-text);
-  background-color: var(--vp-button-alt-bg);
-}
-
-.button.alt:hover {
-  border-color: var(--vp-button-alt-hover-border);
-  color: var(--vp-button-alt-hover-text);
-  background-color: var(--vp-button-alt-hover-bg);
-  filter: drop-shadow(0 5px 5px var(--vp-button-alt-bg));
-}
-
-.button.alt:active {
-  border-color: var(--vp-button-alt-active-border);
-  color: var(--vp-button-alt-active-text);
-  background-color: var(--vp-button-alt-active-bg);
-}
-
-.button.sponsor {
-  border-color: var(--vp-button-sponsor-border);
-  color: var(--vp-button-sponsor-text);
-  background-color: var(--vp-button-sponsor-bg);
-}
-
-.button.sponsor:hover {
-  border-color: var(--vp-button-sponsor-hover-border);
-  color: var(--vp-button-sponsor-hover-text);
-  background-color: var(--vp-button-sponsor-hover-bg);
-  filter: drop-shadow(0 5px 5px var(--vp-button-sponsor-bg));
-}
-
-.button.sponsor:active {
-  border-color: var(--vp-button-sponsor-active-border);
-  color: var(--vp-button-sponsor-active-text);
-  background-color: var(--vp-button-sponsor-active-bg);
-}
-</style>
+<!-- No style needed as we're using UnoCSS utility classes -->

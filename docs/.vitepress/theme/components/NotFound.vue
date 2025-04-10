@@ -17,7 +17,7 @@ function getMsg() {
 </script>
 
 <template>
-  <div class="not-found">
+  <div class="mt-40 flex flex-col justify-center items-center">
     <div class="font-extrabold text-4xl">
       😵 404 NOT FOUND 😵
     </div>
@@ -28,12 +28,4 @@ function getMsg() {
   </div>
 </template>
 
-<style scoped>
-.not-found {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>
+<!-- No style needed as we're using UnoCSS utility classes -->

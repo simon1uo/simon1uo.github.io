@@ -19,6 +19,7 @@ export default defineConfig({
         'vue',
         '@vueuse/core',
       ],
+      dts: 'auto-imports.d.ts',
     }),
     {
       name: 'code-block-escape',

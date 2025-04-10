@@ -1,0 +1,104 @@
+<script setup lang="ts">
+import { useData } from 'vitepress'
+import VPNavBarAppearance from 'vitepress/dist/client/theme-default/components/VPNavBarAppearance.vue'
+import VPNavBarExtra from 'vitepress/dist/client/theme-default/components/VPNavBarExtra.vue'
+import VPNavBarHamburger from 'vitepress/dist/client/theme-default/components/VPNavBarHamburger.vue'
+import VPNavBarSocialLinks from 'vitepress/dist/client/theme-default/components/VPNavBarSocialLinks.vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+
+import NavBarMenu from './NavBarMenu.vue'
+
+defineProps<{
+  isScreenOpen: boolean
+}>()
+
+defineEmits<{
+  (e: 'toggleScreen'): void
+}>()
+
+// Create our own implementation of useLayout based on VitePress source code
+function useLayout() {
+  const { frontmatter, theme } = useData()
+
+  // Determine if current page is home page
+  const isHome = computed(() => {
+    return !!(frontmatter.value.isHome || frontmatter.value.layout === 'home')
+  })
+
+  // Determine if the page has a sidebar
+  const hasSidebar = computed(() => {
+    // Check if sidebar is explicitly disabled in frontmatter
+    if (frontmatter.value.sidebar === false)
+      return false
+
+    // Check if we're on the home page (home doesn't have sidebar by default)
+    if (isHome.value)
+      return false
+
+    // Check if there's a sidebar configuration for this page
+    return theme.value.sidebar !== false
+  })
+
+  return {
+    isHome,
+    hasSidebar,
+  }
+}
+
+// Get scroll position
+const y = ref(0)
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    y.value = window.scrollY
+  })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', () => {
+    y.value = window.scrollY
+  })
+})
+
+// Use our layout composable
+const { isHome, hasSidebar } = useLayout()
+
+// Get site data for the title
+const { site } = useData()
+const siteTitle = computed(() => site.value.title)
+
+// Create a reactive classes object for the navbar
+const classes = computed(() => ({
+  'home': isHome.value,
+  'has-sidebar': hasSidebar.value,
+  'top': y.value > 0,
+}))
+</script>
+
+<template>
+  <div class="w-full flex p-5 justify-between" :class="classes">
+    <div class="flex items-center pointer-events-auto">
+      <!-- Logo and site title -->
+      <div
+        class="text-lg font-bold text-dark:70 dark:text-white/50 hover:text-dark:80 transition-colors duration-250 mr-5"
+      >
+        <a href="/" class="no-underline">{{ siteTitle }}</a>
+      </div>
+      <!-- Navigation menu -->
+      <div class="items-center hidden md:flex">
+        <NavBarMenu />
+      </div>
+    </div>
+
+    <div class="flex pointer-events-auto">
+      <VPNavBarAppearance />
+      <VPNavBarSocialLinks />
+      <VPNavBarExtra />
+      <VPNavBarHamburger :active="isScreenOpen" @click="$emit('toggleScreen')" />
+    </div>
+  </div>
+</template>
+
+<style scoped>
+/* Dark mode adjustments handled by UnoCSS classes */
+</style>

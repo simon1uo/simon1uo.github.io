@@ -6,12 +6,12 @@ const { theme } = data
 </script>
 
 <template>
-  <footer class="footer">
-    <div class="container">
-      <p class="text">
+  <footer class="mx-auto max-w-960px md:px-6">
+    <div>
+      <p class="m-0 text-center leading-normal text-sm text-[var(--c-text-light)] opacity-60">
         {{ theme.footer.copyright }}
       </p>
-      <p class="text">
+      <p class="m-0 text-center leading-normal text-sm text-[var(--c-text-light)] opacity-60">
         Theme by
         <a href="https://github.com/simon1uo/simon1uo.github.io">simon1uo</a>
       </p>
@@ -19,24 +19,4 @@ const { theme } = data
   </footer>
 </template>
 
-<style scoped>
-.footer {
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-@media (min-width: 720px) {
-  .footer {
-    padding: 0 1.5rem;
-  }
-}
-
-.text {
-  margin: 0;
-  text-align: center;
-  line-height: 1.4;
-  font-size: 0.9rem;
-  color: var(--c-text-light);
-  @apply opacity-60;
-}
-</style>
+<!-- No style needed as we're using UnoCSS utility classes -->

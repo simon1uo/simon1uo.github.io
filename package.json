@@ -15,6 +15,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
     "@unocss/eslint-plugin": "^66.0.0",
+    "@vue/tsconfig": "^0.7.0",
     "@vueuse/core": "^13.1.0",
     "concurrently": "^7.4.0",
     "dayjs": "^1.11.13",
