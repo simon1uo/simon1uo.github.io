@@ -6,6 +6,7 @@ const themeConfig: DefaultTheme.Config = {
   nav,
   socialLinks: [
     {
+      ariaLabel: 'simon1uo',
       icon: 'github',
       link: 'http://github.com/simon1uo/simon1uo.github.io',
     },

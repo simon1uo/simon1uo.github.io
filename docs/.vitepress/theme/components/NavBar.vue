@@ -6,7 +6,10 @@ import VPNavBarHamburger from 'vitepress/dist/client/theme-default/components/VP
 import VPNavBarSocialLinks from 'vitepress/dist/client/theme-default/components/VPNavBarSocialLinks.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 
+import NavBarAppearanceSwitch from './NavBarAppearanceSwitch.vue'
+import NavBarHamburger from './NavBarHamburger.vue'
 import NavBarMenu from './NavBarMenu.vue'
+import NavBarSocialLinks from './NavBarSocialLinks.vue'
 
 defineProps<{
   isScreenOpen: boolean
@@ -76,29 +79,27 @@ const classes = computed(() => ({
 </script>
 
 <template>
-  <div class="w-full flex p-5 justify-between" :class="classes">
-    <div class="flex items-center pointer-events-auto">
+  <div class="w-full flex justify-between p-5" :class="classes">
+    <div class="pointer-events-auto flex items-center">
       <!-- Logo and site title -->
       <div
-        class="text-lg font-bold text-dark:70 dark:text-white/50 hover:text-dark:80 transition-colors duration-250 mr-5"
-      >
+        class="mr-5 text-lg text-dark:70 font-bold transition-colors duration-250 dark:text-white/50 hover:text-dark:80">
         <a href="/" class="no-underline">{{ siteTitle }}</a>
       </div>
       <!-- Navigation menu -->
-      <div class="items-center hidden md:flex">
+      <div class="hidden items-center md:flex">
         <NavBarMenu />
       </div>
     </div>
 
-    <div class="flex pointer-events-auto">
-      <VPNavBarAppearance />
-      <VPNavBarSocialLinks />
-      <VPNavBarExtra />
-      <VPNavBarHamburger :active="isScreenOpen" @click="$emit('toggleScreen')" />
+    <div class="pointer-events-auto flex items-center gap-2">
+      <!-- <VPNavBarAppearance /> -->
+      <NavBarAppearanceSwitch />
+      <NavBarSocialLinks />
+      <NavBarHamburger :active="isScreenOpen" @click="$emit('toggleScreen')" />
+      <!-- <VPNavBarSocialLinks /> -->
+      <!-- <VPNavBarExtra /> -->
+      <!-- <VPNavBarHamburger :active="isScreenOpen" @click="$emit('toggleScreen')" /> -->
     </div>
   </div>
 </template>
-
-<style scoped>
-/* Dark mode adjustments handled by UnoCSS classes */
-</style>
