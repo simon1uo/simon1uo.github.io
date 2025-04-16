@@ -22,29 +22,25 @@ function isActive(link: string) {
   <nav class="flex items-center">
     <div class="flex items-center">
       <div class="flex items-center gap-2">
-        <div v-for="item in navItems" :key="item.text" class="relative">
+        <div v-for="item in navItems" :key="item.text" class="relative transition-colors duration-1000">
           <!-- Regular nav link -->
-          <a
-            v-if="!item.items"
-            class="block text-base font-medium px-1 transition-colors duration-250 text-[var(--vp-c-text-2)] no-underline hover:text-[var(--vp-c-text-1)]"
-            :class="{ 'text-[var(--vp-c-brand)]': isActive(item.link) }"
-            :href="normalizeLink(item.link)"
-          >
+          <a v-if="!item.items"
+            class="hover:text-brand dark:hover:text-brand-dark block px-1 text-base font-medium no-underline"
+            :class="{ 'text-brand dark:text-brand-dark': isActive(item.link) }" :href="normalizeLink(item.link)">
             {{ item.text }}
           </a>
 
           <!-- Dropdown menu -->
-          <div v-else class="relative group">
-            <button class="block text-base font-medium px-1 transition-colors duration-250 text-[var(--vp-c-text-2)] bg-transparent border-none cursor-pointer hover:text-[var(--vp-c-text-1)]">
+          <div v-else class="group relative">
+            <button
+              class="block cursor-pointer border-none bg-transparent px-1 text-base text-[var(--vp-c-text-2)] font-medium transition-colors duration-250 hover:text-[var(--vp-c-text-1)]">
               {{ item.text }}
             </button>
-            <div class="absolute top-full right-0 bg-[var(--vp-c-bg)] rounded-md py-2 min-w-[150px] hidden z-100 shadow-lg group-hover:block border-1 border-[var(--vp-c-divider)]">
-              <a
-                v-for="subItem in item.items"
-                :key="subItem.text"
-                class="block py-2 px-4 text-[var(--vp-c-text-2)] no-underline text-sm transition-colors duration-250 hover:text-[var(--vp-c-text-1)] hover:bg-[var(--vp-c-bg-secondary)]"
-                :href="normalizeLink(subItem.link)"
-              >
+            <div
+              class="absolute right-0 top-full z-100 hidden min-w-[150px] border-1 border-[var(--vp-c-divider)] rounded-md bg-[var(--vp-c-bg)] py-2 shadow-lg group-hover:block">
+              <a v-for="subItem in item.items" :key="subItem.text"
+                class="block px-4 py-2 text-sm text-[var(--vp-c-text-2)] no-underline transition-colors duration-250 hover:bg-[var(--vp-c-bg-secondary)] hover:text-[var(--vp-c-text-1)]"
+                :href="normalizeLink(subItem.link)">
                 {{ subItem.text }}
               </a>
             </div>
@@ -57,6 +53,7 @@ function isActive(link: string) {
 
 <style scoped>
 @media (max-width: 768px) {
+
   /* Responsive adjustments */
   :deep(.gap-8) {
     gap: 1rem;

@@ -48,7 +48,7 @@ async function toggleAppearance({ clientX: x, clientY: y }: MouseEvent) {
 </script>
 
 <template>
-  <div class="flex items-center sm:hidden">
+  <div class="flex items-center">
     <span class="i-akar-sun-fill dark:i-akar-moon-fill icon-button" @click="toggleAppearance" />
   </div>
 </template>

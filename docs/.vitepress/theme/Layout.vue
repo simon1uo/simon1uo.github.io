@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
-import Copyright from './components/Copyright.vue'
-import HomeHero from './components/HomeHero.vue'
-
-const { Layout } = DefaultTheme
+import ContentWrapper from './components/ContentWrapper.vue'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <Layout />
+  <div class="min-h-full w-full">
+    <NavBar />
+    <ContentWrapper />
+
+  </div>
 </template>
