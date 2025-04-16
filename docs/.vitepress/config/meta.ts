@@ -1,5 +1,5 @@
 export default {
   lang: 'zh-CN',
-  title: 'xxxxxxx',
+  title: 'simon1uo',
   description: 'xxx',
 }

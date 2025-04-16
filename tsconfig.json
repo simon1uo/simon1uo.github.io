@@ -1,27 +1,28 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ESNext",
+    "jsx": "preserve",
     "lib": [
-      "ES2015",
-      "DOM"
+      "DOM",
+      "ESNext"
     ],
     "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["docs/.vitepress/*"]
     },
     "resolveJsonModule": true,
-    "emitDeclarationOnly": true,
-    "noEmit": false
+    "types": [
+      "vite/client"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "vite-env.d.ts",
-    "auto-imports.d.ts",
-    "docs/**/*",
-    "docs/**/*.vue",
-    "docs/**/*.d.ts"
+  "exclude": [
+    "dist",
+    "node_modules"
   ]
 }

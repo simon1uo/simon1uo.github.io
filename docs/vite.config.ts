@@ -1,3 +1,4 @@
+import { resolve } from 'node:path'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'

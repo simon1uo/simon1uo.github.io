@@ -48,8 +48,10 @@ const siteTitle = computed(() => site.value.title)
     <div class="h-nav w-full flex justify-between p-5"
       :class="`${isHome ? 'home' : ''} ${y > 0 ? 'bg-white/50 dark:bg-dark/80 backdrop-blur shadow' : 'bg-transparent'}`">
       <div class="pointer-events-auto flex items-center">
-        <div class="mr-5 text-lg text-dark:70 font-bold dark:text-white/50 hover:text-dark:80">
-          <a href="/" class="no-underline">{{ siteTitle }}</a>
+        <div class="mr-5 text-lg text-dark:70 font-bold transition-colors duration-500 dark:text-white/50  ">
+          <a href="/" class="no-underline">
+            ({{ siteTitle }}) <span class="i-emoji-microscope"></span>
+          </a>
         </div>
         <div class="hidden items-center md:flex">
           <NavBarMenu />

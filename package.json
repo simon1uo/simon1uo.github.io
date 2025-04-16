@@ -5,23 +5,31 @@
   "description": "a simon1uo personal website",
   "author": "simon1uo",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --host",
     "generate": "nodemon --watch docs/posts -e md collect-data.mjs",
     "start": "concurrently \"pnpm:generate\" \"pnpm:dev\"",
     "build": "node collect-data.mjs && vitepress build docs",
     "serve": "vitepress serve docs",
     "lint": "eslint . --ext .js,.ts,.vue,.md,.json"
   },
+  "dependencies": {
+    "@unocss/reset": "66.1.0-beta.11",
+    "@vueuse/core": "^13.1.0",
+    "dayjs": "^1.11.13",
+    "vitepress": "1.6.3",
+    "vue": "^3.5.13"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
     "@iconify-json/akar-icons": "^1.2.2",
+    "@iconify-json/fluent-emoji": "^1.2.3",
+    "@iconify-json/fluent-emoji-high-contrast": "^1.2.3",
     "@types/node": "^22.14.0",
     "@unocss/eslint-plugin": "^66.0.0",
     "@unocss/preset-icons": "66.1.0-beta.10",
+    "@unocss/preset-web-fonts": "66.1.0-beta.11",
     "@vue/tsconfig": "^0.7.0",
-    "@vueuse/core": "^13.1.0",
     "concurrently": "^7.4.0",
-    "dayjs": "^1.11.13",
     "eslint": "^9.23.0",
     "eslint-plugin-format": "^1.0.1",
     "fast-glob": "^3.3.3",
@@ -32,11 +40,6 @@
     "unplugin-auto-import": "^19.1.2",
     "unplugin-icons": "^0.14.9",
     "unplugin-vue-components": "^28.4.1",
-    "vite": "^6.2.5",
-    "vitepress": "1.6.3",
-    "vue": "^3.5.13"
-  },
-  "dependencies": {
-    "@unocss/preset-web-fonts": "66.1.0-beta.11"
+    "vite": "^6.2.5"
   }
 }

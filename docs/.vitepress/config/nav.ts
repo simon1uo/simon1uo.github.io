@@ -6,8 +6,8 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/',
   },
   {
-    text: 'about',
-    link: '/about',
+    text: 'blog',
+    link: '/blog',
   },
   {
     text: 'projects',

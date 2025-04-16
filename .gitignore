@@ -26,3 +26,4 @@ docs/components.d.ts
 post-data.json
 docs/.vitepress/cache
 auto-imports.d.ts
+public

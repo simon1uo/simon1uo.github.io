@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { useData } from 'vitepress';
 import ContentFooter from './ContentFooter.vue'
+import PageWrapper from './PageWrapper.vue'
+
+const { frontmatter } = useData() 
 </script>
 
 <template>
-  <div class="mx-auto max-w-960px md:px-6 pt-[theme(height.nav)]">
-    <div class="content-padding">
-      <Content class="vp-doc slide-enter-content" />
-      <ContentFooter />
-    </div>
-  </div>
+  <PageWrapper>
+    <Content class="vp-doc slide-enter-content" :class="frontmatter.classes" />
+    <ContentFooter />
+  </PageWrapper>
 </template>

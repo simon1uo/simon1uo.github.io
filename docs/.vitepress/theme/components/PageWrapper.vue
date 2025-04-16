@@ -1,11 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="page">
-    <div class="container">
-      <div class="content">
-        <slot />
-      </div>
+  <div class="mx-auto max-w-960px md:px-6 pt-[theme(height.nav)]">
+    <div class="page-padding">
+      <slot />
     </div>
   </div>
 </template>

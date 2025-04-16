@@ -8,16 +8,19 @@ export default defineConfig((() => {
   return {
     presets: [
       presetWind3(),
-      presetAttributify({}),
+      presetAttributify({
+
+      }),
       presetIcons({
         collections: {
           akar: () => import('@iconify-json/akar-icons/icons.json').then(i => i.default),
+          // @ts-ignore
+          emoji: () => import('@iconify-json/fluent-emoji/icons.json').then(i => i.default),
+          'emoji-contrast': () => import('@iconify-json/fluent-emoji-high-contrast/icons.json').then(i => i.default),
         },
         extraProperties: {
           'display': 'inline-block',
           'vertical-align': 'middle',
-          'height': '1.2em',
-          'width': '1.2em',
         },
       }),
       presetWebFonts({
@@ -26,11 +29,13 @@ export default defineConfig((() => {
           sans: ['Roboto', 'Inter'],
           mono: ['IBM Plex Mono'],
         },
+        processors: createLocalFontProcessor(),
       }),
     ],
     shortcuts: {
       'icon-button': 'inline-block cursor-pointer font-size-5 text-dark/50 dark:text-white/50 hover:text-dark/70 dark:hover:text-white/70 transition-colors duration-250',
-      'content-padding': 'p-[32px_24px_96px] md:p-[48px_32px_128px] lg:p-[32px_32px_0]',
+      'page-padding': 'p-[32px_24px_96px] md:p-[48px_32px_128px] lg:p-[32px_32px_0]',
+      'text-title': 'font-bold font-size-10',
     },
     theme: {
       colors: {
