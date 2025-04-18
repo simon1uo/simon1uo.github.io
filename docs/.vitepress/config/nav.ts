@@ -1,22 +1,18 @@
-import { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from 'vitepress'
 
 const nav: DefaultTheme.NavItem[] = [
   {
-    text: "main",
-    link: "/",
+    text: 'main',
+    link: '/',
   },
   {
-    text: "archive",
-    link: "/archive",
+    text: 'blog',
+    link: '/blog',
   },
   {
-    text: "tags",
-    link: "/tags",
+    text: 'projects',
+    link: '/projects',
   },
-  {
-    text: "about",
-    link: "/about",
-  },
-];
+]
 
-export default nav;
+export default nav

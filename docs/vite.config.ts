@@ -1,14 +1,12 @@
-import type { UserConfig } from "vite";
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
-import WindiCSS from "vite-plugin-windicss";
+import { resolve } from 'node:path'
+import UnoCss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import { defineConfig } from 'vite'
 
-const config: UserConfig = {
-  base: "/",
+export default defineConfig({
+  base: '/',
   optimizeDeps: {
-    exclude: ["vue-demi", "@vueuse/shared", "@vueuse/core"],
+    exclude: ['vue-demi', '@vueuse/shared', '@vueuse/core'],
   },
   server: {
     hmr: {
@@ -16,40 +14,22 @@ const config: UserConfig = {
     },
   },
   plugins: [
+    UnoCss(),
     AutoImport({
-      resolvers: [
-        IconsResolver({
-          prefix: "icon",
-          enabledCollections: ["mdi", "fluent-emoji", "ri"],
-        }),
+      imports: [
+        'vue',
+        '@vueuse/core',
       ],
-    }),
-
-    Components({
-      dirs: ["docs/.vitepress/theme/components"],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      resolvers: [
-        IconsResolver({
-          prefix: "icon",
-          enabledCollections: ["mdi", "fluent-emoji", "ri"],
-        }),
-      ],
-    }),
-    Icons({
-      autoInstall: true,
-    }),
-    WindiCSS({
-      preflight: false,
+      dts: 'auto-imports.d.ts',
     }),
     {
-      name: "code-block-escape",
-      enforce: "post",
+      name: 'code-block-escape',
+      enforce: 'post',
       transform(code, id) {
-        if (!id.endsWith(".md")) return;
-        return code.replace(/\/\/```/gm, "```");
+        if (!id.endsWith('.md'))
+          return
+        return code.replace(/\/\/```/g, '```')
       },
     },
   ],
-};
-
-export default config;
+})

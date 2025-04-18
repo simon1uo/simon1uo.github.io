@@ -1,41 +1,61 @@
-name: deploy
+name: Deploy to GitHub Pages
 
-# 在main分支发生push事件时触发。
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
-env: # 设置环境变量
-  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   build:
-    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
-
+    runs-on: ubuntu-latest
     steps:
-      # 检出
       - name: Checkout
-        uses: actions/checkout@v2
-      
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.32.9
-      
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16.x"
-          cache: "pnpm"
+        uses: actions/checkout@v4
 
-        # 构建
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Build
-        run: |
-          pnpm install
-          pnpm run build
+        run: pnpm run build
 
-      # 发布到 gh-page 分支
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: ./docs/.vitepress/dist
-          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          path: docs/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

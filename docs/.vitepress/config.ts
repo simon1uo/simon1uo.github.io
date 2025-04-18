@@ -1,11 +1,29 @@
-import { defineConfig } from "vitepress";
-import meta from "./config/meta";
-import head from "./config/head";
-import themeConfig from "./config/themeConfig";
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vitepress'
+import head from './config/head'
+import meta from './config/meta'
+import themeConfig from './config/themeConfig'
 
 export default defineConfig({
   ...meta,
-  base: "/",
+  base: '/',
   head,
   themeConfig,
-});
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPNavBar\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/NavBar.vue', import.meta.url),
+          ),
+        },
+      ],
+    },
+  },
+  markdown: {
+    container: {
+      // customClass: true,
+    },
+  },
+})

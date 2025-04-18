@@ -1,63 +1,67 @@
-export const hashRE = /#.*$/;
-export const extRE = /(index)?\.(md|html)$/;
-export const endingSlashRE = /\/$/;
-export const outboundRE = /^[a-z]+:/i;
-export const EXTERNAL_URL_RE = /^[a-z]+:/i;
+export const hashRE = /#.*$/
+export const extRE = /(index)?\.(md|html)$/
+export const endingSlashRE = /\/$/
+export const outboundRE = /^[a-z]+:/i
+export const EXTERNAL_URL_RE = /^[a-z]+:/i
 
 export function isNullish(value: any): value is null | undefined {
-  return value === null || value === undefined;
+  return value === null || value === undefined
 }
 
 export function isArray(value: any): value is any[] {
-  return Array.isArray(value);
+  return Array.isArray(value)
 }
 
 export function isExternal(path: string): boolean {
-  return outboundRE.test(path);
+  return outboundRE.test(path)
 }
 
 export function isActive(route: any, path?: string): boolean {
-  if (path === undefined) return false;
+  if (path === undefined)
+    return false
 
-  const routePath = normalize(route.path);
-  const pagePath = normalize(path);
+  const routePath = normalize(route.path)
+  const pagePath = normalize(path)
 
-  return routePath === pagePath;
+  return routePath === pagePath
 }
 
 export function normalize(path: string): string {
-  return decodeURI(path).replace(hashRE, "").replace(extRE, "");
+  return decodeURI(path).replace(hashRE, '').replace(extRE, '')
 }
 
 export function joinUrl(base: string, path: string): string {
-  const baseEndsWithSlash = base.endsWith("/");
-  const pathStartsWithSlash = path.startsWith("/");
+  const baseEndsWithSlash = base.endsWith('/')
+  const pathStartsWithSlash = path.startsWith('/')
 
-  if (baseEndsWithSlash && pathStartsWithSlash) return base.slice(0, -1) + path;
+  if (baseEndsWithSlash && pathStartsWithSlash)
+    return base.slice(0, -1) + path
 
-  if (!baseEndsWithSlash && !pathStartsWithSlash) return `${base}/${path}`;
+  if (!baseEndsWithSlash && !pathStartsWithSlash)
+    return `${base}/${path}`
 
-  return base + path;
+  return base + path
 }
 
 export function getPathDirName(path: string): string {
-  const segments = path.split("/");
+  const segments = path.split('/')
 
-  if (segments[segments.length - 1]) segments.pop();
+  if (segments[segments.length - 1])
+    segments.pop()
 
-  return ensureEndingSlash(segments.join("/"));
+  return ensureEndingSlash(segments.join('/'))
 }
 
 export function ensureSlash(path: string): string {
-  return ensureEndingSlash(ensureStartingSlash(path));
+  return ensureEndingSlash(ensureStartingSlash(path))
 }
 
 export function ensureStartingSlash(path: string): string {
-  return /^\//.test(path) ? path : `/${path}`;
+  return /^\//.test(path) ? path : `/${path}`
 }
 
 export function ensureEndingSlash(path: string): string {
-  return /(\.html|\/)$/.test(path) ? path : `${path}/`;
+  return /(\.html|\/)$/.test(path) ? path : `${path}/`
 }
 
 /**
@@ -65,5 +69,5 @@ export function ensureEndingSlash(path: string): string {
  * `index` to slush.
  */
 export function removeExtention(path: string): string {
-  return path.replace(/(index)?(\.(md|html))?$/, "") || "/";
+  return path.replace(/(index)?(\.(md|html))?$/, '') || '/'
 }

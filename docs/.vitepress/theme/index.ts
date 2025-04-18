@@ -1,17 +1,17 @@
-import Layout from "./Layout.vue";
-import NotFound from "./components/NotFound.vue";
+import NotFound from './components/NotFound.vue'
+import Layout from './Layout.vue'
+import { registerPageComponents } from './utils/components'
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind.css'
 
-import "virtual:windi.css";
-import "./style/custom.css";
-
-import Archive from "./components/Archive.vue";
-import Tags from "./components/Tags.vue";
+import 'vitepress/theme-without-fonts'
+import './style/custom.css'
+import './style/main.css'
 
 export default {
   Layout,
   NotFound,
-  enhanceApp({ app, router, siteData }) {
-    app.component("Archive", Archive);
-    app.component("Tags", Tags);
+  enhanceApp({ app }) {
+    registerPageComponents(app)
   },
-};
+}

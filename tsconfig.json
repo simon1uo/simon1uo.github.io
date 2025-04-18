@@ -1,23 +1,28 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "baseUrl": ".",
-    "target": "es2017",
-    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["docs/.vitepress/*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "vite/client"
+    ],
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.vue",
-    "docs/.vitepress/vite.config.ts",
-    "docs/.vitepress/windi.config.ts"
-  ],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }

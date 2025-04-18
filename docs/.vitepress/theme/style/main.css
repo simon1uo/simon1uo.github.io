@@ -1,0 +1,221 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-scrollbar: #eee;
+  --c-scrollbar-hover: #bbb;
+}
+
+html.dark {
+  color-scheme: dark;
+  --c-scrollbar: #111;
+  --c-scrollbar-hover: #222;
+}
+
+* {
+  scrollbar-color: var(--c-scrollbar) var(--vp-c-bg);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 24px;
+  font-family: var(--vp-font-family-base);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-bg);
+  font-synthesis: style;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--vp-font-family-mono);
+}
+
+vite-error-overlay {
+  z-index: 9999;
+}
+
+mjx-container {
+  overflow-x: auto;
+}
+
+mjx-container > svg {
+  display: inline-block;
+  margin: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+@keyframes slide-enter {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+
+} */
+
+html:not(.no-sliding) [slide-enter],
+html:not(.no-sliding) .slide-enter,
+html:not(.no-sliding) .slide-enter-content > div > *:not(:has(.table-of-contents)) {
+  --enter-stage: 0;
+  --enter-step: 90ms;
+  --enter-initial: 0ms;
+  animation: slide-enter 1s both 1;
+  animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
+}
+
+.slide-enter-content > div > *:nth-child(1) {
+  --enter-stage: 1 !important;
+}
+
+.slide-enter-content > div > *:nth-child(2) {
+  --enter-stage: 2 !important;
+}
+
+.slide-enter-content > div > *:nth-child(3) {
+  --enter-stage: 3 !important;
+}
+
+.slide-enter-content > div > *:nth-child(4) {
+  --enter-stage: 4 !important;
+}
+
+.slide-enter-content > div > *:nth-child(5) {
+  --enter-stage: 5 !important;
+}
+
+.slide-enter-content > div > *:nth-child(6) {
+  --enter-stage: 6 !important;
+}
+
+.slide-enter-content > div > *:nth-child(7) {
+  --enter-stage: 7 !important;
+}
+
+.slide-enter-content > div > *:nth-child(8) {
+  --enter-stage: 8 !important;
+}
+
+.slide-enter-content > div > *:nth-child(9) {
+  --enter-stage: 9 !important;
+}
+
+.slide-enter-content > div > *:nth-child(10) {
+  --enter-stage: 10 !important;
+}
+
+.slide-enter-content > div > *:nth-child(11) {
+  --enter-stage: 11 !important;
+}
+
+.slide-enter-content > div > *:nth-child(12) {
+  --enter-stage: 12 !important;
+}
+
+.slide-enter-content > div > *:nth-child(13) {
+  --enter-stage: 13 !important;
+}
+
+.slide-enter-content > div > *:nth-child(14) {
+  --enter-stage: 14 !important;
+}
+
+.slide-enter-content > div > *:nth-child(15) {
+  --enter-stage: 15 !important;
+}
+
+.slide-enter-content > div > *:nth-child(16) {
+  --enter-stage: 16 !important;
+}
+
+.slide-enter-content > div > *:nth-child(17) {
+  --enter-stage: 17 !important;
+}
+
+.slide-enter-content > div > *:nth-child(18) {
+  --enter-stage: 18 !important;
+}
+
+.slide-enter-content > div > *:nth-child(19) {
+  --enter-stage: 19 !important;
+}
+
+.slide-enter-content > div > *:nth-child(20) {
+  --enter-stage: 20 !important;
+}
