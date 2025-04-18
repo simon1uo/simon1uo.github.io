@@ -1,221 +1,103 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
+/** Base Styles */
 :root {
-  --c-scrollbar: #eee;
-  --c-scrollbar-hover: #bbb;
+  /**
+   * Colors
+   * --------------------------------------------------------------------- */
+  --vp-c-bg: #fff;
+  --vp-c-bg-semi: rgba(255, 255, 255, 0.8);
+  --vp-c-bg-secondary: #f3f5f7;
+
+  --vp-c-white: #ffffff;
+  --vp-c-black: #000000;
+
+  --vp-c-divider-light: rgba(60, 60, 67, 0.12);
+  --vp-c-divider-dark: rgba(84, 84, 88, 0.48);
+
+  --vp-c-text-light-1: #2c3e50;
+  --vp-c-text-light-2: #476582;
+  --vp-c-text-light-3: #90a4b7;
+
+  --vp-c-brand: #3b89e5;
+  --vp-c-brand-active: #3b89e5;
+  --vp-c-brand-dark: #3b89e5;
+  --vp-c-brand-light: #3ba0fd;
+  --vp-c-brand-lighter: #4ea6f7;
+  --vp-c-brand-darker: #3077c7;
+
+  --vp-c-disabled-bg: #e5e5e5;
+  --vp-c-disabled-fg: #666;
+
+  --code-bg-color: #f8f8f8;
+  --code-inline-bg-color: rgba(27, 31, 35, 0.04);
+  --code-highlight: rgba(0, 0, 0, 0.04);
+
+  /**
+   * Typography
+   * --------------------------------------------------------------------- */
+
+  --vp-font-family-base:
+    'Inter', apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'Martian Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+  /**
+   * Z Indexes
+   *
+   * Algolia SearchBox has a z-index of 200, so make sure not to go above
+   * that value.
+   * --------------------------------------------------------------------- */
+
+  --z-index-navbar: 10;
+  --z-index-sidebar: 6;
+
+  /**
+   * Shadows
+   * --------------------------------------------------------------------- */
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+
+  /**
+   * Sizes
+   * --------------------------------------------------------------------- */
+
+  --header-height: 3.6rem;
+  --sidebar-width: 17.5rem;
+  --scrollbar-width: 0;
 }
 
 html.dark {
-  color-scheme: dark;
-  --c-scrollbar: #111;
-  --c-scrollbar-hover: #222;
+  --vp-c-bg: #111;
+  --vp-c-bg-semi: rgba(17, 17, 17, 0.8);
+  --vp-c-bg-secondary: #222;
+  --vp-c-text: #f5f7fa;
+  --vp-c-text-light: #f9f9f9;
+  --vp-c-text-lighter: #ffffff;
+
+  --vp-c-divider-light: rgba(200, 200, 200, 0.12);
+  --vp-c-divider-dark: rgba(200, 200, 200, 0.48);
+  --code-bg-color: #191919;
+  --code-inline-bg-color: rgba(255, 255, 255, 0.04);
+  --code-highlight: rgba(0, 0, 0, 0.66);
+
+  --vp-c-disabled-bg: #333;
+  --vp-c-disabled-fg: #aaa;
 }
 
-* {
-  scrollbar-color: var(--c-scrollbar) var(--vp-c-bg);
-}
+/** Fallback Styles */
+:root {
+  --vp-c-divider: var(--vp-c-divider-light);
 
-::-webkit-scrollbar {
-  width: 6px;
-}
+  --vp-c-text: var(--vp-c-text-light-1);
+  --vp-c-text-light: var(--vp-c-text-light-2);
+  --vp-c-text-lighter: var(--vp-c-text-light-3);
 
-::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
+  --vp-c-bg: var(--vp-c-white);
 
-::-webkit-scrollbar-track,
-::-webkit-scrollbar-corner {
-  background: var(--c-bg);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--c-scrollbar);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--c-scrollbar-hover);
-}
-
-body {
-  margin: 0;
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-  line-height: 24px;
-  font-family: var(--vp-font-family-base);
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--vp-c-text-1);
-  background-color: var(--vp-c-bg);
-  font-synthesis: style;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-p {
-  margin: 0;
-}
-
-strong,
-b {
-  font-weight: 600;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: var(--vp-font-family-mono);
-}
-
-vite-error-overlay {
-  z-index: 9999;
-}
-
-mjx-container {
-  overflow-x: auto;
-}
-
-mjx-container > svg {
-  display: inline-block;
-  margin: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-  }
-}
-
-@keyframes slide-enter {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* @media (prefers-reduced-motion: no-preference) {
-
-} */
-
-html:not(.no-sliding) [slide-enter],
-html:not(.no-sliding) .slide-enter,
-html:not(.no-sliding) .slide-enter-content > div > *:not(:has(.table-of-contents)) {
-  --enter-stage: 0;
-  --enter-step: 90ms;
-  --enter-initial: 0ms;
-  animation: slide-enter 1s both 1;
-  animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
-}
-
-.slide-enter-content > div > *:nth-child(1) {
-  --enter-stage: 1 !important;
-}
-
-.slide-enter-content > div > *:nth-child(2) {
-  --enter-stage: 2 !important;
-}
-
-.slide-enter-content > div > *:nth-child(3) {
-  --enter-stage: 3 !important;
-}
-
-.slide-enter-content > div > *:nth-child(4) {
-  --enter-stage: 4 !important;
-}
-
-.slide-enter-content > div > *:nth-child(5) {
-  --enter-stage: 5 !important;
-}
-
-.slide-enter-content > div > *:nth-child(6) {
-  --enter-stage: 6 !important;
-}
-
-.slide-enter-content > div > *:nth-child(7) {
-  --enter-stage: 7 !important;
-}
-
-.slide-enter-content > div > *:nth-child(8) {
-  --enter-stage: 8 !important;
-}
-
-.slide-enter-content > div > *:nth-child(9) {
-  --enter-stage: 9 !important;
-}
-
-.slide-enter-content > div > *:nth-child(10) {
-  --enter-stage: 10 !important;
-}
-
-.slide-enter-content > div > *:nth-child(11) {
-  --enter-stage: 11 !important;
-}
-
-.slide-enter-content > div > *:nth-child(12) {
-  --enter-stage: 12 !important;
-}
-
-.slide-enter-content > div > *:nth-child(13) {
-  --enter-stage: 13 !important;
-}
-
-.slide-enter-content > div > *:nth-child(14) {
-  --enter-stage: 14 !important;
-}
-
-.slide-enter-content > div > *:nth-child(15) {
-  --enter-stage: 15 !important;
-}
-
-.slide-enter-content > div > *:nth-child(16) {
-  --enter-stage: 16 !important;
-}
-
-.slide-enter-content > div > *:nth-child(17) {
-  --enter-stage: 17 !important;
-}
-
-.slide-enter-content > div > *:nth-child(18) {
-  --enter-stage: 18 !important;
-}
-
-.slide-enter-content > div > *:nth-child(19) {
-  --enter-stage: 19 !important;
-}
-
-.slide-enter-content > div > *:nth-child(20) {
-  --enter-stage: 20 !important;
+  --code-line-height: 24px;
+  --code-font-family: var(--font-family-mono);
+  --code-font-size: 14px;
 }
